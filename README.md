@@ -6,7 +6,6 @@ The following members are part of this training.
 1. Sonakshi
 2. Prashant (pm9889)
 1. Sonakshi 
-2. Prashant
 3. Piyush 232
 4. Nikita (nikita-adwani)
 5. Laveena (yet to join)
