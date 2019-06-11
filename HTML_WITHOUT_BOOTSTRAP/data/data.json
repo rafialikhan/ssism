@@ -1,0 +1,11 @@
+{
+	"firstName" : "vikas",
+	"lastName" : "Konsam",
+	"address": "HSR Layout, Bangalore, 4500447",
+	"age" : 37,
+	"isAlive" : true,
+	"eductionHistory" : ["St Peters", "Rajiv Gandhi", "BITS Pilani"],
+	"nestTedObj" : {
+		"someKey" : "Some value"
+	}
+}
