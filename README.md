@@ -4,7 +4,7 @@ Internal training folder to learn about Git, Angular Bootstrap
 The following members are part of this training.
 
 1. Sonakshi
-2. Prashant
+2. Prashant pm9889
 3. Piyush 232
 4. Nikita
 5. Laveena (yet to join)
