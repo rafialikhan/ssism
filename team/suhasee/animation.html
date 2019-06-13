@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<style>
+		body{
+			background: #2193b0; 
+            background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  
+            background: linear-gradient(to right, #6dd5ed, #2193b0); 
+		}
+		/* css trasition */
+		button
+		{  
+			width: 80px;
+            height: 40px;
+            color: white;
+            background-color: #555555;
+            transition: width 0.5s;
+            border-radius: 40px;
+            transition: width 2s, height 2s, transform 2s;
+        }
+        button:hover {
+        	width: 150px;
+        	height: 80px;
+           transform: rotate(360deg);
+          }  
+          /*.....*/ 
+          /*--css animation--*/
+          div {
+              width: 100px;
+              height: 100px;
+              margin-top: 250px;
+              position: relative;
+              background-color: red;
+              animation-name: box;
+              animation-duration: 4s;
+               animation-iteration-count: 10;
+               animation-timing-function: linear;
+               animation-direction: alternate;
+              }
+          @keyframes box {
+              0%   {background-color:red; left:0px; top:0px;}
+             25%  {background-color:yellow; left:200px; top:0px;}
+             50%  {background-color:blue; left:200px; top:200px;}
+             75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+           }
+		/*--css animation--*/
+</style>
+</head>
+<body>
+	<center>
+	     <!-- css transition -->
+	     
+		<button  type="button" class="btn">css transition</button>
+		<!--css transition-->
+		<!--animation-->
+		<div></div>
+		<!--animation-->
+   </center>
+</body>
+</html>
+
+
