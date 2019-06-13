@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.saleh {
+    margin: auto;
+}
+
+.calcontainer {
+    margin-left: 10;
+    width: 380px;
+    height: 380px;
+    margin: auto;
+    margin-top: 100px;
+    border: 5px solid black;
+    border-radius: 20px 5px 20px 5px;
+}
+
+#panel {
+    margin-top: 32px;
+    margin-bottom: 30px;
+    text-align: right;
+    width: 378px;
+    height: 47px;
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    background-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: rgb(221, 221, 221);
+}
+
+#panel:hover {
+    cursor: col-resize;
+}
+
+.bttn {
+    border: none;
+    margin-bottom: 8px;
+    border-radius: 35px;
+    margin-right: 6px;
+    width: 59px;
+    height: 45px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    margin-left: 24px;
+}
+
+.bttne {
+    border-radius: 30px;
+    width: 120px;
+    margin-top: 10px;
+    margin-right: 11px;
+    color: red;
+    margin-left: 40px;
+    border: none;
+}
+
+h1 {
+    text-align: center;
+}
