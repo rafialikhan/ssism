@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { candidateData } from '../dataCandidate';
+import { Component, OnInit, ɵCompiler_compileModuleSync__POST_R3__ } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-list',
@@ -7,10 +7,19 @@ import { candidateData } from '../dataCandidate';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-    public candidates = candidateData;
-  constructor() { }
+    public candidates:any;
+  constructor(private dataService: DataService) { 
+
+    this.dataService.getCandidateData().subscribe(data => {
+      this.candidates= data;
+    })
+
+    
+  }
 
   ngOnInit() {
+
+   
   }
 
 }
