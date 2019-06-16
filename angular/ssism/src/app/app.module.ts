@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 
+// @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
 @NgModule({
   declarations: [
     AppComponent,
