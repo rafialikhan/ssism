@@ -1,8 +1,14 @@
-<ul>Candidate List
-
+<div class="card">
+<div class="card-body">
+  <div class=card-header id="head">
+  Candidate List</div>
   <div *ngIf="candidates">
     <div *ngFor="let candidate of candidates">
-      <li type="1"><a href="#">{{candidate.candidateName}}</a></li>
-    </div>
-  </div>
-</ul>
+        <ul class="list-group"> 
+          <li type="circle"><a class="list-group-item" href="#">{{candidate.candidateName}}</a></li>
+</ul>      
+</div>
+</div>
+
+</div>
+</div>
