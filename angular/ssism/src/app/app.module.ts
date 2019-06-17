@@ -10,6 +10,7 @@ import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 
+// @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
 @NgModule({
   declarations: [
     AppComponent,

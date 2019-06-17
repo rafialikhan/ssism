@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 export class DataService {
 
   constructor(private http: HttpClient) {}
-  dataUrl = environment.dataURL;
+  dataUrl = environment.dataURL;  
 
     getCandidateData(){
       // return candidateData;
