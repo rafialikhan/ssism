@@ -1,200 +1,66 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <script type="text/javascript" src="calculator.js"></script> 
-        
-        
-            <style>
-                .calcButton{
-                    height: 40px;
-                    width: 40px;
-                    margin: 2px;
-                }
-                /* .card-body{
-                    transform: translateX(-50%) translateY(-50%);
-                    top: 50%;
-                    left: 50%;
-                } */
-                /* #calc{
-                    margin-top: 50%;
-                    margin-left: 50%;
-                } */
-                #home{
-                 position: absolute;
-                 top:60px;
-                 left: 40%;
-                }
-                .calcDisplay{
-                   
-                 width: 181px; 
-                }
-                #home{
-            
-               background: gray;
-        
-            opacity: 0.5;
-          
-         
-            /* margin-left: 50px;
-            margin-top: 50px; */
- 
- 
-         }
-        
-            </style>
-        </head>
-        <body>
-                <div class="card">
-                        <div class="card-body" id=home>
-                     
-                      
-        <form class="calcForm" name="calculator"  id="calc" > 
-            <input type="text" class="calcDisplay " id="display" >
-            <div class="calcRow">
-                <input type="button" class="calcButton" value="7" onclick="numInput('7')" />
-                <input type="button" class="calcButton" value="8" onclick="numInput('8')" />
-                <input type="button" class="calcButton" value="9" onclick="numInput('9')" />
-                <input type="button" class="calcButton" value="+" onclick="setOperation('add')" />
-            </div>
-            <div class="calcRow">
-                <input type="button" class="calcButton" value="4" onclick="numInput('4')" />
-                <input type="button" class="calcButton" value="5" onclick="numInput('5')" />
-                <input type="button" class="calcButton" value="6" onclick="numInput('6')" />
-                <input type="button" class="calcButton" value="-" onclick="setOperation('subtract')" />
-            </div>
-            <div class="calcRow">
-                <input type="button" class="calcButton" value="1" onclick="numInput('1')" />
-                <input type="button" class="calcButton" value="2" onclick="numInput('2')" />
-                <input type="button" class="calcButton" value="3" onclick="numInput('3')" />
-                <input type="button" class="calcButton" value="x" onclick="setOperation('multiply')" />
-            </div>
-            <div class="calcRow">
-                <input type="button" class="calcButton" value="0" onclick="numInput('0')" />
-                <input type="button" class="calcButton" value="." onclick="insertDecimal('.')" />
-                <input type="button" class="calcButton" value="C" onclick="clearDisplay()" />
-                <input type="button" class="calcButton" value="=" onclick="calculate()" />
-            </div>
-        </form>
-   </div>
-    </div>
-
-    <script>
-     displayNum = "";
-    storedNum = "";
-    operation = 0;
-    queuedOperation = 0;
-    calculationFinished = false;
-
-function clearDisplay() {
-    // Select the calculator's display
-    var display = document.getElementById("display");
-
-    // Clear the global variables and the display
-    displayNum = "";
-    storedNum = "";
-    operation = 0;
-    queuedOperation = 0;        
-    display.value = displayNum;
-
-}
-
-function numInput(num) {
-   
-    var display = document.getElementById("display");
-
-   
-    if ((display.value == "") && num == "0") {
-    
-      return;
-    }
-   
-    else if (calculationFinished == true) {
-        display.value = num;
-        calculationFinished = false;
-    }
-  
-    else {
-      display.value += num;
-    }
-}
-
-function insertDecimal(dec) {
- 
-    var display = document.getElementById("display");
-
-   
-    for (i = 0; i < display.value.length; i++)
-        if (display.value.charAt(i) == '.') {
+<html lang="en">
+<head>
+    <style>
+        #clear{
+            width: 130px;
+        }
+        .formstyle{
+            width: 150px;
+            height: 261px;
+            margin:auto;
+            border: 2px solid black;
+            background: gray;
+        }
+        input{
+            width: 40px;
+        }
+        #answerstyle{
+            width: 125px;
+        }
+        #form{
+            margin-left: 13px;
+            margin-top: 5px;
            
-            return;
+
         }
     
-        display.value += dec;
-}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formstyle">
+        <form name="forms" id="form">
+            <input type="text" name="answer" id="answerstyle"><br><br>  
+            <input type="button" value="1" onclick="forms.answer.value +='1'">
+             <input type="button" value="2" onclick="forms.answer.value +='2'">
+             <input type="button" value="3" onclick="forms.answer.value +='3'">
+             <br><br>
 
-function setOperation(command) {
-    
-    var display = document.getElementById("display"),
-    
-            evalDisplay = eval(displayNum),
-            evalStored = eval(storedNum);
+             <input type="button" value="4" onclick="forms.answer.value +='4'">
+             <input type="button" value="5" onclick="forms.answer.value +='5'">
+             <input type="button" value="6" onclick="forms.answer.value +='6'">
+             <br><br>
 
-      
-    if (queuedOperation == 0) {
-        storedNum = display.value;
-    }
-    else if (queuedOperation == 1) {
-        storedNum = evalStored + evalDisplay;
-    }
-    else if (queuedOperation == 2) {
-        storedNum = evalStored - evalDisplay;
-    }
-    else if (queuedOperation == 3) {
-        storedNum = evalStored * evalDisplay;
-    }
+             <input type="button" value="7" onclick="forms.answer.value +='7'">
+             <input type="button" value="8" onclick="forms.answer.value +='8'">
+             <input type="button" value="9" onclick="forms.answer.value +='9'">
+             <br><br>
 
-   
-    if (command == 'add') {
-        operation = 1;
-    }
-    else if (command == 'subtract') {
-        operation = 2;
-    }
-    if (command == 'multiply') {
-        operation = 3;
-    }
+             <input type="button" value="+" onclick="forms.answer.value +='+'">
+             <input type="button" value="-" onclick="forms.answer.value +='-'">
+             <input type="button" value="*" onclick="forms.answer.value +='*'">
+             <br><br>
 
-   
-    queuedOperation = operation;
-   
-    display.value = '';
-}
-
-function calculate() {
-    
-    var display = document.getElementById("display");
-            displayNum = display.value;
-    var evalDisplay = eval(displayNum),
-            evalStored = eval(storedNum);
-
-    // Do the math
-    if (operation == 1) {
-        displayNum = evalStored + evalDisplay;
-    }
-    else if (operation == 2) {
-        displayNum = evalStored - evalDisplay;
-    }
-    else if (operation == 3) {
-        displayNum = evalStored * evalDisplay;
-    }
-   
-    display.value = displayNum;
-    if (operation != 0)
-        calculationFinished = true;
-    operation = 0;
-    queuedOperation = 0;
-    displayNum = "";
-    storedNum = "";
-}</script>
+             <input type="button" value="/" onclick="forms.answer.value +='/'">
+             <input type="button" value="0" onclick="forms.answer.value +='0'">
+             <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+             <br><br>
+             <input type="button" value="Cancel" onclick="forms.answer.value =''" id="clear">
+        </form>
+    </div>
 </body>
 </html>

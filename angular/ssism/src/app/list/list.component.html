@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p>
     list works!
 </p>
@@ -7,3 +8,19 @@
         {{canddidateName}}
     </ul>
 </div>
+=======
+<div class="card">
+<div class="card-body">
+  <div class=card-header id="head">
+  Candidate List</div>
+  <div *ngIf="candidates">
+    <div *ngFor="let candidate of candidates">
+        <ul class="list-group"> 
+          <li type="circle"><a class="list-group-item" href="#">{{candidate.candidateName}}</a></li>
+</ul>      
+</div>
+</div>
+
+</div>
+</div>
+>>>>>>> 57d2cc9fe1112129dfca1f8037b86eafb9e8ad0a
