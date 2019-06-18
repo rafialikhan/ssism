@@ -27,15 +27,15 @@
                 </div>
                </div>
                <div class="col-md-12">
-                 <div class="_content mt-2">
+                 <div class="_content mt-2 mr-3">
                     <div *ngFor="let candidate of candidates">
-                        {{candidate.candidateName}}
-          
-                  ,    <a class="list-group-item" href="#">{{candidate.candidateDetails.emailId}}</a>
-                         
-                      <a class="list-group-item" href="#">{{candidate.candidateDetails.Class}}</a>
-                                   
-                 <a class="list-group-item" href="#">{{candidate.candidateDetails.mobileNo}}</a>
+                        <span class="mr-1" style="color: yellowgreen">Name:</span>   {{candidate.candidateName}}<br>
+                        <span class="mr-1"  style="color: yellowgreen">Email:</span>   {{candidate.candidateDetails.emailId}}<br>
+                        <span class="mr-1"  style="color: yellowgreen">Class:</span>    {{candidate.candidateDetails.Class}}<br>
+                        <span class="mr-1"  style="color: yellowgreen">Mobileno:</span>   {{candidate.candidateDetails.mobileNo}}<br>
+                        <span class="mr-1"  style="color: yellowgreen">Father Name:</span>   {{candidate.candidateDetails.fatherName}}<br>
+                        <span class="mr-1"  style="color: yellowgreen">Mother Name:</span>  {{candidate.candidateDetails.motherName}}<br>
+                     <hr>
                      </div>
                  </div>
                </div>
