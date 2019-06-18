@@ -2,12 +2,15 @@
   <div class="card-body">
     <div class=card-header>
       Candidate List</div>
-    <div >
+    <div *ngIf=candidates>
       <div *ngFor="let candidate of candidates">
-        <ul class="list-group">
-          <li type="circle"><a class="list-group-item" href="#">{{candidate.candidateName}}</a></li>
+        <ul class="list-group list-group-flush">
+          <li  class="list-group-item">{{candidate.candidateName}}</li>
         </ul>
       </div>
     </div>
+    <div class="text-right">
+    <button type="button" class="btn btn-outline-danger pull-right" >View Profile</button>
+</div>
   </div>
 </div>

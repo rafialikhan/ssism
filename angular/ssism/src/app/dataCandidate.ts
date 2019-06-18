@@ -1,10 +1,10 @@
 export const candidateData = [
     {
-      candidateName: 'laveena pahuja',
+      candidateName: 'Laveena pahuja',
       candidateDetails: {
         images: '',
         emailId: 'laveena2806@gmail.com',
-        Class: 'BCA',
+        class: 'BCA',
         address: 'Badi sindhi colony Harda',
         city: 'Harda',
         fatherName: 'Rajendra Pahuja',
@@ -19,7 +19,7 @@ export const candidateData = [
       candidateDetails: {
         images: '',
         emailId: 'niknikkynikitagmail.com',
-        Class: 'BCA',
+        class: 'BCA',
         address: '16,Badi sindhi colony Harda',
         city: 'Harda',
         fatherName: 'Sunil Adwani',
@@ -34,7 +34,7 @@ export const candidateData = [
       candidateDetails: {
         images: '',
         emailId: 'piyushsen044@gmail.com',
-        Class: 'BCA',
+        class: 'BCA',
         address: 'LIG colony,harda',
         city: 'Harda',
         fatherName: 'Deepak Sen',
@@ -49,7 +49,7 @@ export const candidateData = [
       candidateDetails: {
         images: '',
         emailId: 'prashantmalviya189@gmail.com',
-        Class: 'BCA',
+        class: 'BCA',
         address: 'Sakur colony,Harda',
         city: 'Harda',
         fatherName: 'Ramchandra Malviya',
@@ -64,7 +64,7 @@ export const candidateData = [
       candidateDetails: {
         images: '',
         emailId: 'ysonakshi57@gmail.com',
-        Class: 'BSC(CS)',
+        class: 'BSC(CS)',
         address: 'Yadav Nagar,ktg',
         city: 'Dewas',
         fatherName: 'Gajanand yadav',
