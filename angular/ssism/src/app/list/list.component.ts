@@ -7,19 +7,18 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-    public candidates:any;
-  constructor(private dataService: DataService) { 
+  public candidates: any;
+  constructor(private dataService: DataService) {
 
     this.dataService.getCandidateData().subscribe(data => {
-      this.candidates= data;
+      this.candidates = data;
+      console.log(data)
     })
 
-    
   }
 
   ngOnInit() {
 
-   
   }
 
 }
