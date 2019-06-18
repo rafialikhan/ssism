@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';   
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'ssism';
-  constructor(private router:Router){}
-  Profile(){
-    this.router.navigate(['/profile']);
+  constructor(private router: Router) { }
 
-}
+
+  // profile() {
+  //   this.router.navigate(['/profile'])
+  // }
+
 }
