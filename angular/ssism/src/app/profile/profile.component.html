@@ -8,88 +8,31 @@
     </div>
     
     <div class="row">
-      <div class="col-md-1"></div>
+      <div class="col-md-6"></div>
 
       <div class="col-md-3">
         <div class="card">
           <div class="card-body">
+              <div *ngFor="let candidate of candidates" class="col-8 card">
             <img src="assets/head-659651_960_720.png" class="img-fluid rounded-circle w-50 mb-3">
-            <h3>Dummy Profile</h3>
-            <p></p>
-            <p></p>
-            <p></p>
+            
+            
+                  
+            <a class="list-group-item" href="#">{{candidate.candidateName}}</a>
+          
+                        <a class="list-group-item" href="#">{{candidate.candidateDetails.emailId}}</a>
+                          
+                      <a class="list-group-item" href="#">{{candidate.candidateDetails.Class}}</a>
+                                   
+                 <a class="list-group-item" href="#">{{candidate.candidateDetails.mobileNo}}</a>
+                  
             <button type="button" class="btn btn-outline-primary">More Details</button>
+          </div>
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/head-659651_960_720.png" class="img-fluid rounded-circle w-50 mb-3">
-              <h3>Dummy Profile</h3>
-              <p></p>
-              <p></p>
-              <p></p>
-              <button type="button" class="btn btn-outline-primary">More Details</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-body">
-                <img src="assets/head-659651_960_720.png" class="img-fluid rounded-circle w-50 mb-3">
-                <h3>Dummy Profile</h3>
-                <p></p>
-                <p></p>
-                <p></p>
-                <button type="button" class="btn btn-outline-primary">More Details</button>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="row"></div>
-    <div class="row">       
-        <div class="col-md-1"></div>
-          <div class="col-md-3">
-              <div class="card">
-                <div class="card-body">
-                  <img src="assets/head-659651_960_720.png" class="img-fluid rounded-circle w-50 mb-3">
-                  <h3>Dummy Profile</h3>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <button type="button" class="btn btn-outline-primary">More Details</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-3">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="assets/head-659651_960_720.png" class="img-fluid rounded-circle w-50 mb-3">
-                    <h3>Dummy Profile</h3>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <button type="button" class="btn btn-outline-primary">More Details</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="col-md-1"></div>
-              <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <img src="assets/head-659651_960_720.png" class="img-fluid rounded-circle w-50 mb-3">
-                      <h3>Dummy Profile</h3>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <button type="button" class="btn btn-outline-primary">More Details</button>
-                    </div>
-                  </div>
-                </div>       
+      <div class="col-md-3"></div>
+      
     </div>
   </div>
 </section>
