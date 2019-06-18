@@ -28,10 +28,15 @@
                </div>
                <div class="col-md-12">
                  <div class="_content mt-2">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                     sed do eiusmod tempor incididunt ut labore et dolore magna 
-                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <div *ngFor="let candidate of candidates">
+                        {{candidate.candidateName}}
+          
+                  ,    <a class="list-group-item" href="#">{{candidate.candidateDetails.emailId}}</a>
+                         
+                      <a class="list-group-item" href="#">{{candidate.candidateDetails.Class}}</a>
+                                   
+                 <a class="list-group-item" href="#">{{candidate.candidateDetails.mobileNo}}</a>
+                     </div>
                  </div>
                </div>
              </div>
