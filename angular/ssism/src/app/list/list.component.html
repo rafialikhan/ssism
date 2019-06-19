@@ -5,7 +5,11 @@
         <div *ngIf=candidates>
             <div *ngFor="let candidate of candidates">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{candidate.candidateName}}</li>
+                    <li class="list-group-item">
+                        
+                      <a [routerLink]="['/profile', candidate.id]">  {{candidate.candidateName}}</a>
+                    
+                    </li>
                 </ul>
             </div>
         </div>
