@@ -4,6 +4,9 @@ $white:#ffffff;
 img{
     margin-top: -70px;
     margin-left: 10%;
+    width: 7cm;
+    height: 6cm;
+    
 }
 .card{
     border-radius: 0;
@@ -15,5 +18,8 @@ img{
     box-shadow: 5px 5px 10px #9E9E9E;
 }
 ._content{
-    font-size: 130%;
+    font-size: 110%;
+}
+span{
+    color: yellowgreen;
 }

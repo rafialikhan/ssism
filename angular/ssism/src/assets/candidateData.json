@@ -3,7 +3,7 @@
     "id": 1,
     "candidateName": "Laveena Pahuja",
     "candidateDetails": {
-      "images": "",
+      "imgPath": "assets/laveena.jpg",
       "emailId": "laveena2806@gmail.com",
       "class": "BCA",
       "address": "Badi sindhi colony Harda",
@@ -19,7 +19,7 @@
     "id": 2,
     "candidateName": "Nikita Adwani",
     "candidateDetails": {
-      "images": "",
+      "imgPath": "assets/nikky.jpg",
       "emailId": "niknikkynikitagmail.com",
       "class": "BCA",
       "address": "16,Badi sindhi colony Harda",
@@ -35,7 +35,7 @@
     "id": 3,
     "candidateName": "Piyush Sen",
     "candidateDetails": {
-      "images": "",
+      "imgPath": "assets/piyush.jpg",
       "emailId": "piyushsen044@gmail.com",
       "class": "BCA",
       "address": "LIG colony,harda",
@@ -51,7 +51,7 @@
     "id": 4,
     "candidateName": "Prashant Malviya",
     "candidateDetails": {
-      "images": "",
+      "imgPath": "assets/prashant.jpg",
       "emailId": "prashantmalviya189@gmail.com",
       "class": "BCA",
       "address": "Sakur colony,Harda",
@@ -67,7 +67,7 @@
     "id": 5,
     "candidateName": "Sonakshi Yadav",
     "candidateDetails": {
-      "images": "",
+      "imgPath": "assets/sonakshi1.jpg",
       "emailId": "ysonakshi57@gmail.com",
       "class": "BSC(CS)",
       "address": "Yadav Nagar,ktg",
@@ -83,7 +83,7 @@
     "id": 6,
     "candidateName": "Suhasee Talreja",
     "candidateDetails": {
-      "images": "",
+      "imgPath": "assets/suhasee.jpg",
       "emailId": "suhaseetalreja14@gmail.com",
       "class": "BCA",
       "address": "Vivekanand complex,Harda",

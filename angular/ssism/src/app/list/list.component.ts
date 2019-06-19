@@ -20,7 +20,7 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {}
-  profile() {
-    this.router.navigate([".profile"]);
-  }
+  // profile() {
+  //   this.router.navigate([".profile"]);
+  // }
 }

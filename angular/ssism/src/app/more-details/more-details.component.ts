@@ -39,4 +39,5 @@ export class MoreDetailsComponent implements OnInit {
     }
     return false;
   }
+  
 }

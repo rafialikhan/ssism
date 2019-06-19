@@ -2,19 +2,21 @@
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <div class="card card-bordered">
-        <div class="_blogcard mt-5">
+        <div class="_blogcard mt-4">
           <div class="row">
-            <div class="col-lg-7 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-12 col-sm-12">
               <div class="row">
                 <div class="col-md-12">
                   <!-- image -->
-                  <img src="assets/dummy-image-square.png" class="img-fluid">
+                  <img src="
+                  {{moreDetails?.candidateDetails.imgPath}}" class="img-fluid 
+                mb-3  center">
                   <div class="col-md-12">
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-5 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-12 col-sm-12">
               <div class="row">
                 <div class="col-md-12">
                   <div class="pb-2 mb-2 border-bottom">
@@ -30,22 +32,25 @@
                       <span class="mr-1" style="color: yellowgreen">Email:</span>
                       {{moreDetails?.candidateDetails.emailId}}<br>
                       <span class="mr-1" style="color: yellowgreen">Class:</span>
-                      {{moreDetails?.candidateDetails.Class}}<br>
+                      {{moreDetails?.candidateDetails.class}}<br>
                       <span class="mr-1" style="color: yellowgreen">Mobileno:</span>
                       {{moreDetails?.candidateDetails.mobileNo}}<br>
-                      <span class="mr-1" style="color: yellowgreen">Father Name:</span>
+                      <span class="mr-1" >Father Name:</span>
                       {{moreDetails?.candidateDetails.fatherName}}<br>
-                      <span class="mr-1" style="color: yellowgreen">Mother Name:</span>
+                      <span class="mr-1" >Mother Name:</span>
                       {{moreDetails?.candidateDetails.motherName}}<br>
-                      <span class="mr-1" style="color: yellowgreen"> Hobbies:</span>
+                      <span class="mr-1" > Hobbies:</span>
                       {{moreDetails?.candidateDetails.hobbies}}<br>
-                      <span class="mr-1" style="color: yellowgreen"> Address:</span>
+                      <span class="mr-1" > Address:</span>
                       {{moreDetails?.candidateDetails.address}}<br>
-                       <span class="mr-1" style="color: yellowgreen"> City:</span>
+                       <span class="mr-1" > City:</span>
                       {{moreDetails?.candidateDetails.city}}<br>
-                      <span class="mr-1" style="color: yellowgreen"> collegeName:</span>
+                      <span class="mr-1" > collegeName:</span>
                       {{moreDetails?.candidateDetails.collegeName}}<br>
-                      <hr>
+                      <div class="text-right">
+            <button type="button" class="btn btn-outline-primary pull-right mt-2"
+            [routerLink]="['']"  >Cancel </button>
+        </div>
                   </div>
                 </div>
               </div>
