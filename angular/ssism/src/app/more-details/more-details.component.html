@@ -2,44 +2,48 @@
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <div class="card card-bordered">
-       <div class="_blogcard mt-5">
-         <div class="row">
-           <div class="col-lg-7 col-md-12 col-sm-12">
-             <div class="row">
-               <div class="col-md-12">
-                 <!-- image -->
-                 <img src="assets/dummy-image-square.png" class="img-fluid">
-                 <div class="col-md-12">
-                                    </div>
-               </div>
-             </div>
-           </div>
-           <div class="col-lg-5 col-md-12 col-sm-12">
-             <div class="row">
-               <div class="col-md-12">
-                 <div class="pb-2 mb-2 border-bottom">
-                 <div class="_blogtitle font-weight-bold h3">
-                   Student_Details
-                 </div>
+        <div class="_blogcard mt-5">
+          <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- image -->
+                  <img src="assets/dummy-image-square.png" class="img-fluid">
+                  <div class="col-md-12">
+                  </div>
                 </div>
-               </div>
-               <div class="col-md-12">
-                 <div class="_content mt-2 mr-3">
-                    <div *ngFor="let candidate of candidates">
-                        <span class="mr-1" style="color: yellowgreen">Name:</span>   {{candidate.candidateName}}<br>
-                        <span class="mr-1"  style="color: yellowgreen">Email:</span>   {{candidate.candidateDetails.emailId}}<br>
-                        <span class="mr-1"  style="color: yellowgreen">Class:</span>    {{candidate.candidateDetails.Class}}<br>
-                        <span class="mr-1"  style="color: yellowgreen">Mobileno:</span>   {{candidate.candidateDetails.mobileNo}}<br>
-                        <span class="mr-1"  style="color: yellowgreen">Father Name:</span>   {{candidate.candidateDetails.fatherName}}<br>
-                        <span class="mr-1"  style="color: yellowgreen">Mother Name:</span>  {{candidate.candidateDetails.motherName}}<br>
-                     <hr>
-                     </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="pb-2 mb-2 border-bottom">
+                    <div class="_blogtitle font-weight-bold h3">
+                      Student_Details
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="_content mt-2 mr-3">
+                      <span class="mr-1" style="color: yellowgreen">Name:</span>
+                      {{moreDetails?.candidateName}}<br>
+                      <span class="mr-1" style="color: yellowgreen">Email:</span>
+                      {{moreDetails?.candidateDetails.emailId}}<br>
+                      <span class="mr-1" style="color: yellowgreen">Class:</span>
+                      {{moreDetails?.candidateDetails.Class}}<br>
+                      <span class="mr-1" style="color: yellowgreen">Mobileno:</span>
+                      {{moreDetails?.candidateDetails.mobileNo}}<br>
+                      <span class="mr-1" style="color: yellowgreen">Father Name:</span>
+                      {{moreDetails?.candidateDetails.fatherName}}<br>
+                      <span class="mr-1" style="color: yellowgreen">Mother Name:</span>
+                      {{moreDetails?.candidateDetails.motherName}}<br>
+                      <hr>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

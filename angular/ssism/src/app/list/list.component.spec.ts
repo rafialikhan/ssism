@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-=======
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
->>>>>>> 57d2cc9fe1112129dfca1f8037b86eafb9e8ad0a
 
 import { ListComponent } from './list.component';
 

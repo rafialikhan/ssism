@@ -6,47 +6,33 @@
         <h1 class="text-center">profile</h1>
       </div>
     </div>
-
     <div class="row">
-      <div class="col-md-2"></div>
+      <div class="col-5 card mr-4 ml-5">
+        <div class="col-md-6">
+          <img src="assets/head-659651_960_720.png" class="img-fluid
+            rounded-circle w-50 mb-3">
+          <div class="card-body ml-4">
+            <span class="mr-1">Name:</span>
+            {{selectedCandidate?.candidateName}}<br>
+            <span class="mr-1">Email:</span>
+            {{selectedCandidate?.candidateDetails.emailId}}<br>
 
+            <span class="mr-1">Class:</span>
+            {{selectedCandidate?.candidateDetails.Class}}<br>
 
-      <div  >
-        <div class="row">
-
-          <div  class="col-5 card mr-4
-            ml-5">
- 
-              <div class="col-md-6">
-                <img src="assets/head-659651_960_720.png" class="img-fluid
-                  rounded-circle w-50 mb-3">
-
-                <div class="card-body ml-4">
-                  <span class="mr-1">Name:</span> {{selectedCandidate?.candidateName}}<br>
-                  <span class="mr-1">Email:</span>
-                  {{selectedCandidate?.candidateDetails.emailId}}<br>
-
-                  <span class="mr-1">Class:</span>
-                  {{selectedCandidate?.candidateDetails.Class}}<br>
-
-                  <span class="mr-1">Mobile.no:</span>
-                  {{selectedCandidate?.candidateDetails.mobileNo}}<br>
-                  <button type="button" class="btn btn-outline-primary mt-3
-                    mb-3"
-                    (click)= moreDetails()>More Details</button>
-                </div>
-
-              </div>
-   
-            <div class="col-md-2"></div>
+            <span class="mr-1">Mobile.no:</span>
+            {{selectedCandidate?.candidateDetails.mobileNo}}<br>
+            <button type="button" class="btn btn-outline-primary mt-3
+              mb-3"
+              [routerLink]="['/more-details',selectedCandidate?.id ]">More
+              Details</button>
 
           </div>
+
         </div>
+
+
       </div>
     </div>
   </div>
-  <div class="col-md-3"></div>
-
-
-
 </section>
