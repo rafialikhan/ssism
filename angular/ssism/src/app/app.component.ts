@@ -10,9 +10,4 @@ export class AppComponent {
   title = 'ssism';
   constructor(private router: Router) { }
 
-
-  // profile() {
-  //   this.router.navigate(['/profile'])
-  // }
-
 }

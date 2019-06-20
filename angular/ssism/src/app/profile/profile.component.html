@@ -2,49 +2,42 @@
 <section id="team">
   <div class="container my-2 py-2">
     <div class="row mb-3">
-       <div class="col">
-         <h1 class="text-center">profile</h1>
-       </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-2"></div>
-      
-        
-          <div class="card-body">
-            <div class="row">
-              
-              <div *ngFor="let candidate of candidates" class="col-5 card mr-4 ml-5">
-                  <div class="col-md-6">
-            <img src="assets/head-659651_960_720.png" class="img-fluid rounded-circle w-50 mb-3">
-                     
-                 <div class="card-body ml-4">
-                    <span class="mr-1">Name:</span>   {{candidate.candidateName}}<br>
-          
-                    <span class="mr-1">Email:</span>  {{candidate.candidateDetails.emailId}}<br>
-                          
-                    <span class="mr-1">Class:</span>    {{candidate.candidateDetails.Class}}<br>
-                                   
-                    <span class="mr-1">Mobile.no:</span>  {{candidate.candidateDetails.mobileNo}}<br>
-                        <button type="button" class="btn btn-outline-primary mt-3 mb-3" (click)=moreDetails()>More Details</button>
-                  </div>
-            </div>
-          <div class="col-md-2"></div>
-          
-          
-          </div>
-          </div>
-          </div>
-        </div>
+      <div class="col">
+        <h1 class="text-center">profile</h1>
       </div>
-      <div class="col-md-3"></div>
-      
-   
-  
+    </div>
+    <div class="row">
+      <div class="col-5 card mt-5">
+        <div class="col-md-7">
+          <img src="
+              {{selectedCandidate?.candidateDetails.imgPath}}" class="img-fluid 
+            w-50 mb-3  center">
+          <div class="card-body ml-3">
+              <span class="mr-1">
+              <!-- <img src= "
+              {{selectedCandidate?.candidateDetails.imgPath}}" width="100%"> -->
+            </span>
+            <span class="mr-1">Name:</span>
+            {{selectedCandidate?.candidateName}}<br>
+            <span class="mr-1">Email:</span>
+            {{selectedCandidate?.candidateDetails.emailId}}<br>
+
+            <span class="mr-1">Class:</span>
+            {{selectedCandidate?.candidateDetails.class}}<br>
+
+            <span class="mr-1">Mobile.no:</span>
+            {{selectedCandidate?.candidateDetails.mobileNo}}<br>
+            <button type="button" class="btn btn-outline-primary mt-3
+              mb-3"
+              [routerLink]="['/more-details',selectedCandidate?.id ]">More
+              Details</button>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
 </section>
-
-
-
-
-
-
