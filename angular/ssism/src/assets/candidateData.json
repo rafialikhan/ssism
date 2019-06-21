@@ -3,7 +3,7 @@
     "id": 1,
     "candidateName": "Laveena Pahuja",
     "candidateDetails": {
-      "imgPath": "assets/laveena.jpg",
+      "imgPath": "/assets/laveena.jpg",
       "emailId": "laveena2806@gmail.com",
       "class": "BCA",
       "address": "Badi sindhi colony Harda",
