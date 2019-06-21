@@ -11,16 +11,20 @@ import { DataService } from "../services/data.service";
   styleUrls: ["./list.component.scss"]
 })
 export class ListComponent implements OnInit {
-  public candidates: any;
-  router: any;
-  constructor(private dataService: DataService) {
+  candidates:any;
+// canddidateName=['sonakshi','prashant','piyush','laveena','suhashi','nikita'];
+  constructor(private dataService:DataService) { }
+  ngOnInit() {   
+
+    this.getData();
+  }
+  getData() {
     this.dataService.getCandidateData().subscribe(data => {
       this.candidates = data;
-    });
+      console.log(data)
+    })
+
   }
 
-  ngOnInit() {}
-  // profile() {
-  //   this.router.navigate([".profile"]);
-  // }
+  
 }
