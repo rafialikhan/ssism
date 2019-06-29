@@ -1,0 +1,351 @@
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <p id="demo">task</p>
+    <script>
+      var students = [
+        {
+          studentName: "Prashant Malviya",
+          studentID: 1,
+          courses: [
+            {
+              courseName: "HTML",
+              tasks: [
+                {
+                  Name: "HTML Quiz",
+                  scores: 39,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "login form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                },
+                {
+                  Name: " registration form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            },
+            {
+              courseName: "Javascript",
+              tasks: [
+                {
+                  Name: "Javascript Quiz",
+                  scores: 25,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "Validating form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          studentName: "Piyush Sen",
+          studentID: 2,
+          courses: [
+            {
+              courseName: "HTML",
+              tasks: [
+                {
+                  Name: "HTML Quiz",
+                  scores: 35,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "login form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                },
+                {
+                  Name: "registration form",
+                  scores: 5,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            },
+            {
+              courseName: "Javascript",
+              tasks: [
+                {
+                  Name: "Javascript Quiz",
+                  scores: 25,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "Validating form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          studentName: "Nikita Adwani",
+          studentID: 3,
+          courses: [
+            {
+              courseName: "HTML",
+              tasks: [
+                {
+                  Name: "HTML Quiz",
+                  scores: 40,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "login form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                },
+                {
+                  Name: "registration form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            },
+            {
+              courseName: "Javascript",
+              tasks: [
+                {
+                  Name: "Javascript Quiz",
+                  scores: 25,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "Validating form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          studentName: "Laveena pahuja",
+          studentID: 4,
+          courses: [
+            {
+              courseName: "HTML",
+              tasks: [
+                {
+                  Name: "HTML Quiz",
+                  scores: 40,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "login form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                },
+                {
+                  Name: "registration form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            },
+            {
+              courseName: "Javascript",
+              tasks: [
+                {
+                  Name: "Javascript Quiz",
+                  scores: 24,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "Validating form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          studentName: "Sonakshi Yadav",
+          studentID: 5,
+          courses: [
+            {
+              courseName: "HTML",
+              tasks: [
+                {
+                  Name: "HTML Quiz",
+                  scores: 35,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "login form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                },
+                {
+                  Name: "registration form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            },
+            {
+              courseName: "Javascript",
+              tasks: [
+                {
+                  Name: "Javascript Quiz",
+                  scores: 25,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "Validating form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          studentName: "Suhasee Talreja",
+          studentID: 6,
+          courses: [
+            {
+              courseName: "HTML",
+              tasks: [
+                {
+                  Name: "HTML quiz",
+                  scores: 36,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: " login form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                },
+                {
+                  Name: "registration form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            },
+            {
+              courseName: "Javascript",
+              tasks: [
+                {
+                  Name: "Javascript Quiz",
+                  scores: 23,
+                  rewards: 100,
+                  Status: "complete"
+                },
+                {
+                  Name: "Validating form",
+                  scores: 10,
+                  rewards: 0,
+                  Status: "complete"
+                }
+              ]
+            }
+          ]
+        }
+      ];
+      var studentsNewArray = [];
+      var studentName = students.map(function(student) {
+        //   console.log(student)
+        student.courses.map(function(courseName) {
+          courseName.tasks.map(function(task) {
+            studentsNewArray.push({
+              studentName: student.studentName,
+              rewards: task.rewards,
+              taskName: task.Name,
+              id: student.studentID
+            });
+          });
+        });
+      });
+    //   console.log(studentsNewArray);
+      function groupBy(objArray, property) {
+        return objArray.reduce(function(acc, obj)
+         {
+        
+          var key = obj[property];
+          if (!acc[key]) {
+            acc[key] = [];
+          }
+          acc[key].push(obj.rewards);
+          // return  acc + obj ;
+          return acc;
+        }, {
+          
+        });
+      }
+
+      var groupedBy = groupBy(studentsNewArray, "studentName");
+      // return objArray.reduce(function (acc, obj)  // 7
+
+      console.log(groupedBy);
+
+//       var totalReduce =0;
+//       studentsNewArray.map(function(groupedBy){
+//   // console.log(element)
+//   totalReduce = totalReduce + groupedBy.reward
+// //   studentsArray.reduce(function(reward)
+// // {
+// //   totalReduce = totalReduce + element.reward;
+// //   return totalReduce;
+// // })
+// }) 
+// console.log(totalReduce)
+//        
+
+
+
+
+
+
+
+// var i;
+      // for(i=0; i<studentsNewArray.length-1; i++){
+
+      // }
+      //         let newnumber =  studentsNewArray.reduce(function (HTML, Javascript) {
+      //     return HTML, Javascript;
+      // }, 0);
+      // console.log(newnumber);
+    </script>
+  </body>
+</html>

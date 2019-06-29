@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jsfilter</title>
+</head>
+
+<body>
+    <script>
+        var user = {
+            courses: [2]
+        };
+        var student = [{
+            "studentName": "Prashant Malviya",
+            "studentID": 1,
+            "courses": [{
+                "courseName": "HTML",
+                "tasks": [{
+                    "Name": "HTML quiz",
+                    "scores": 39,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a login form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a registration form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }, {
+                "courseName": "Javascript",
+                "tasks": [{
+                    "Name": "Javascript quiz",
+                    "scores": 25,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Validating a form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }]
+        }, {
+            "studentName": "Piyush Sen",
+            "studentID": 2,
+            "courses": [{
+                "courseName": "HTML",
+                "tasks": [{
+                    "Name": "HTML quiz",
+                    "scores": 35,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a login form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a registration form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }, {
+                "courseName": "Javascript",
+                "tasks": [{
+                    "Name": "Javascript quiz",
+                    "scores": 25,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Validating a form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }]
+        }, {
+            "studentName": "Nikita Adwani",
+            "studentID": 3,
+            "courses": [{
+                "courseName": "HTML",
+                "tasks": [{
+                    "Name": "HTML quiz",
+                    "scores": 40,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a login form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a registration form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }, {
+                "courseName": "Javascript",
+                "tasks": [{
+                    "Name": "Javascript quiz",
+                    "scores": 25,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Validating a form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }]
+        }, {
+            "studentName": "Laveena pahuja",
+            "studentID": 4,
+            "courses": [{
+                "courseName": "HTML",
+                "tasks": [{
+                    "Name": "HTML quiz",
+                    "scores": 40,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a login form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a registration form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }, {
+                "courseName": "Javascript",
+                "tasks": [{
+                    "Name": "Javascript quiz",
+                    "scores": 24,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Validating a form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }]
+        }, {
+            "studentName": "Sonakshi Yadav",
+            "studentID": 5,
+            "courses": [{
+                "courseName": "HTML",
+                "tasks": [{
+                    "Name": "HTML quiz",
+                    "scores": 35,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a login form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a registration form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }, {
+                "courseName": "Javascript",
+                "tasks": [{
+                    "Name": "Javascript quiz",
+                    "scores": 25,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Validating a form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }]
+        }, {
+            "studentName": "Suhasee Talreja",
+            "studentID": 6,
+            "courses": [{
+                "courseName": "HTML",
+                "tasks": [{
+                    "Name": "HTML quiz",
+                    "scores": 36,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a login form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }, {
+                    "Name": "Designing a registration form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }, {
+                "courseName": "Javascript",
+                "tasks": [{
+                    "Name": "Javascript quiz",
+                    "scores": 23,
+                    "rewards": 100,
+                    "Status": "complete"
+                }, {
+                    "Name": "Validating a form",
+                    "scores": 0,
+                    "rewards": 0,
+                    "Status": "complete"
+                }]
+            }]
+        }]
+        var studentNewArray = [];
+        var studentsName = student.map(function(studentss) {
+            studentss.courses.map(function(courseName) {
+                courseName.tasks.map(function(items) {
+                    studentNewArray.push({
+                        'studentName': studentss.studentName,
+                        'scores': items.scores,
+                        'taskName': items.Name,
+
+
+                    })
+                });
+            });
+        });
+        // console.log(studentNewArray);
+        var studentScoresWithName = [];
+        studentNewArray.filter(function(items) {
+            // console.log(items);
+            if ((items.scores === 40) || (items.scores === 25)) {
+                // return items.studentsName
+                // console.log("in", items)
+                studentScoresWithName.push({
+                    'name': items.studentName,
+                    'score': items.scores,
+                    'taskName': items.taskName,
+                })
+
+            };
+            // return scores == 40 ? studentsName : 0;
+            // return items.scores === 40 ? items.studentsName : 0;
+        });
+        console.log(studentScoresWithName);
+
+
+        var totalScores = studentScoresWithName.reduce(function(accumulator, item) {
+            return accumulator + item.scores;
+        }, 0);
+        console.log(totalScores);
+
+
+        // var result = Students.filter(st => {
+        //     return st.student.courses.filter(course => {
+        //         // console.log(user.courses, course.id, user.courses.indexOf(course.id));
+        //         return (user.courses.indexOf(course.id) > -1);
+        //     })
+        // });
+
+
+        // var test = Students[0].student.courses.filter(course => {
+        //     return user.courses.indexOf(course.id) > -1;
+        // })
+
+        //console.log(test)
+
+        //st.student.courses.filter(name => user.courses.indexOf(name.id) > -1).length)
+        //console.log(result);
+
+        //
+
+        //TASK 2
+        //Loop through the Students Array and get rewards for each student
+
+        // Create a StudentMap .map()- to create a new array of students and tasks and rewards
+        /*
+
+        Students [
+            {
+                studentName: "Prashant",
+                studentID: 1,
+                courses: [
+                    {
+                      courseName: "",
+                      tasks: [{
+                            scores: 40
+                            rewards: 100
+                      }]
+                    }
+                ]
+            }
+        ]
+
+        */
+
+
+        //Aggregate the rewards using reduce
+
+        // TASK 3
+        // Use StudentMap to get the aggregates for each student
+
+        // TASK 4
+        // Filter student who have score equal to 40 and 25;
+        // Use StudentMap
+    </script>
+
+</body>
+
+</html>
