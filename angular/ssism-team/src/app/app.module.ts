@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { DetailsComponent } from './details/details.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { StudentsListComponent } from './students-list/students-list.component';
+import { StudentListComponent } from './student-list/student-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
     DetailsComponent,
     HeaderComponent,
     FooterComponent,
-    StudentsListComponent
+    StudentListComponent
   ],
   imports: [
     BrowserModule,
