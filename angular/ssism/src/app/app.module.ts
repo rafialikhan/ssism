@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { routes } from './app-routing.module';
+import { routes, AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -22,6 +22,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     RouterModule.forRoot(routes),
     NgbModule,
     HttpClientModule
