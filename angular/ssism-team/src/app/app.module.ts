@@ -3,12 +3,24 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+
+import { DetailsComponent } from './details/details.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { StudentsListComponent } from './students-list/students-list.component';
 import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+
+    DetailsComponent,
+    HeaderComponent,
+    FooterComponent,
+    StudentsListComponent
+
   ],
   imports: [
     BrowserModule,
