@@ -1,6 +1,9 @@
 # Tasks using Javascript map, filter and reduce functions
 Use the [task.json](../master/team/task.json) file to do the following.
 
+### Instruction
+- Name your file, task-js.html or task-js.js, so i can quickly identify it, in your respective folders.
+
 ## MAP 
 - use javascript map function to map the input objects to remove, id and company
 - so that you are only left with a new collection / Array object that has the following properties/attributes.
