@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var students = [{
+            studentName: 'Prashant Malviya',
+            studentID: 1,
+            courses: [{
+                courseName: 'HTML',
+                tasks: [{
+                    Name: 'HTML quiz',
+                    scores: 39,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a login form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a registration form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }, {
+                courseName: 'Javascript',
+                tasks: [{
+                    Name: 'Javascript quiz',
+                    scores: 25,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Validating a form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }]
+        }, {
+            studentName: 'Piyush Sen',
+            studentID: 2,
+            courses: [{
+                courseName: 'HTML',
+                tasks: [{
+                    Name: 'HTML quiz',
+                    scores: 35,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a login form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a registration form',
+                    scores: 5,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }, {
+                courseName: 'Javascript',
+                tasks: [{
+                    Name: 'Javascript quiz',
+                    scores: 25,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Validating a form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }]
+        }, {
+            studentName: 'Nikita Adwani',
+            studentID: 3,
+            courses: [{
+                courseName: 'HTML',
+                tasks: [{
+                    Name: 'HTML quiz',
+                    scores: 40,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a login form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a registration form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }, {
+                courseName: 'Javascript',
+                tasks: [{
+                    Name: 'Javascript quiz',
+                    scores: 25,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Validating a form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }]
+        }, {
+            studentName: 'Laveena pahuja',
+            studentID: 4,
+            courses: [{
+                courseName: 'HTML',
+                tasks: [{
+                    Name: 'HTML quiz',
+                    scores: 40,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a login form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a registration form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }, {
+                courseName: 'Javascript',
+                tasks: [{
+                    Name: 'Javascript quiz',
+                    scores: 24,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Validating a form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }]
+        }, {
+            studentName: 'Sonakshi Yadav',
+            studentID: 5,
+            courses: [{
+                courseName: 'HTML',
+                tasks: [{
+                    Name: 'HTML quiz',
+                    scores: 35,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a login form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a registration form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete',
+                    id: 'h1'
+                }]
+            }, {
+                courseName: 'Javascript',
+                tasks: [{
+                    Name: 'Javascript quiz',
+                    scores: 25,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Validating a form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }]
+        }, {
+            studentName: 'Suhasee Talreja',
+            studentID: 6,
+            courses: [{
+                courseName: 'HTML',
+                tasks: [{
+                    Name: 'HTML quiz',
+                    scores: 36,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a login form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }, {
+                    Name: 'Designing a registration form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }, {
+                courseName: 'Javascript',
+                tasks: [{
+
+
+
+                    Name: 'Javascript quiz',
+                    scores: 23,
+                    rewards: 100,
+                    Status: 'complete'
+                }, {
+                    Name: 'Validating a form',
+                    scores: 10,
+                    rewards: 0,
+                    Status: 'complete'
+                }]
+            }]
+        }];
+        var studentArray = [];
+        var studentsName = students.map(function(student) {
+            // console.log(student.courses);
+            student.courses.map(function(courseName) {
+                // console.log(courseName);
+                courseName.tasks.map(function(rewards) {
+                    //  console.log(rewards);
+                    studentArray.push({
+                        //  'studentName': student.studentName,
+                        'rewards': rewards.rewards
+
+
+                    })
+
+
+                });
+            });
+
+        });
+
+
+
+        //   let sum = _.reduce([1, 1, 1, 1], function(sastudentsUpdateArray, rewards) {
+
+        //    return rewards + rewards;
+
+        //  });
+        // var totalReward = function(studentsUpdateArray) {
+        // return _.reduce(
+        //  studentsUpdateArray,
+        // function(accumulated, e) {
+        //return accumulated + e.rewards
+        // var total = _.reduce(students.tasks,
+        //  function(memorizer, value) {
+        ///   return memorizer + value.price;
+        // }, 0);
+        // console.log('total' + total, 'is this');
+
+
+
+        //  function canAffordCab(studentsUpdateArray) {
+        //     return 300 < totalReward(studentsUpdateArray);
+
+        //  var totalReduce = 0;
+        //   let totalReduce = studentsUpdateArray.reduce(function(previous, reward) {
+        //    return previous + reward;
+        // }, 0)
+        // console.log(totalReduce);
+
+
+        var totalReduce = 0;
+        studentArray.map(function(rewd) {
+            totalReduce = totalReduce + rewd.rewards
+        })
+        console.log(totalReduce);
+    </script>
+
+</body>
+
+</html>
