@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css"
-            href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+            href="bootstrap/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/printest.css">
         <link rel="stylesheet" type="text/css"
-            href="bootstrap-4.3.1-dist/css/bootstrap.css">
+            href="bootstrap/bootstrap/css/bootstrap.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -33,13 +33,24 @@ function createHelper( element, className, elementToAppendTo, obj){
     return el;
 }
 
-let container = createHelper("div", "container h-100 mt-5" , document.body );
-let flex = createHelper("div", "d-flex justify-content-center h-100" , container)
+let container = createHelper("div", "container h-100" , document.body );
+let flex = createHelper("div", "d-flex justify-content-center" , container);
+let card = createHelper("div","card",flex);
+let d2flex = createHelper("div","d-flex justify-content-center",card);
+let logo = createHelper("div","brand_logo_container",d2flex);
+var x = createHelper("IMG","", logo);
+  x.setAttribute("src", "pin.png");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+  let d3flex = createHelper("div","d-flex justify-content-center", card);
 
-let form = createHelper("form", "", flex );
 
-let input = createHelper("input","input-field", form, {type:"text",placeholder:"username",id:"user"}
-);
+
+//let form = createHelper("form", "", flex );
+
+//let input = createHelper("input","input-field", form, {type:"text",placeholder:"username",id:"user"}
+
+// );
 
 
 //flex.innerHTML ="me working!!!"
