@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../task-js.js"></script>
+    <title>task</title>
+</head>
+
+<body>
+    <script>
+        //filter for location india.
+
+        var locationsIndia = details.filter(detailObj =>
+            detailObj.location.indexOf("India") > -1);
+        var locationsIndia = details.filter(function (detailObj) {
+            return detailObj.location.indexOf("India") > -1
+        });
+        console.log(locationsIndia);
+        // filter for location ends
+
+        // filter for yob
+        var dob = details.filter(function (dob) {
+            return dob.yob > "2000";
+        });
+        console.log(dob);
+        // filter for yob ends
+
+        // reduce for gender
+        var totalFemale = details.reduce(function (accumulator, detail) {
+            return accumulator + (detail.gender === "female");
+        }, 0);
+        console.log(totalFemale);
+        // reduce for gender ends
+
+        var someDetails = [];
+details.forEach(function (someDetail) {
+    someDetails.push(someDetail.name,someDetail.gender,someDetail.location,someDetail.yob);
+});
+console.log(someDetails);
+
+
+
+    </script>
+
+</body>
+
+</html>
