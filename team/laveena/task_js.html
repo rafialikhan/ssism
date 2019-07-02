@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../task-js.js"></script>
+    <title>javascript task</title>
+</head>
+
+<body>
+    <script>
+        // filter for location of india
+        var student = details;
+        var locationData = student.filter(function (detail) {
+           
+            return detail.location === "India";
+
+        });
+        console.log(locationData);
+    //   filter of location ends
+
+
+    // filter of yod more than 2000
+
+    var year = student.filter(function(yob){
+        return yob.yob>2000;
+    });
+    console.log(year);
+    // filter of yod more than 2000
+
+
+    // total number female
+    var totalgirls = student.reduce(function(accumulator,detail){
+        return accumulator+(detail.gender === "female")
+    },0);
+    console.log(totalgirls);
+
+    // mapping
+
+    var studentsDetail =[];
+     student.forEach(function(someDetail){
+         studentsDetail.push(someDetail.name);
+         studentsDetail.push(someDetail.gender);
+         studentsDetail.push(someDetail.location);
+         studentsDetail.push(someDetail.yob);
+
+     });
+     console.log(studentsDetail);
+
+    </script>
+
+</body>
+
+</html>
