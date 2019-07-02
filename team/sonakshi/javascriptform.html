@@ -15,7 +15,35 @@
     </head>
 
     <body class="bg">
-       
+        <script>
+            function validation() {
+    
+    var emails = document.getElementById('emails').value;
+    var pass = document.getElementById('pass').value;
+    
+    
+    if (emails == "") {
+                    document.getElementById('emailids').innerHTML = "Please fill the email ids field";
+                    return false;
+                }
+                if (emails.indexOf('@') <= 0) {
+                    document.getElementById('emailids').innerHTML = "@ Invalid Position";
+                    return false;
+                }
+                if ((emails.charAt(emails.length - 4) != '.') && (emails.charAt(emails.length - 3) != '.')) {
+                    document.getElementById('emailids').innerHTML = ". Invalid Position";
+                    return false;
+                }
+    if (pass == "") {
+        document.getElementById('password').innerHTML = "Please fill the password field";
+        return false;
+    }
+    if ((pass.length <= 8) || (pass.length >= 15)) {
+        document.getElementById('password').innerHTML = "user length must be between 8 and 15 ";
+        return false;
+    }
+    }
+        </script>
 <script>
 function createHelper( element, className, elementToAppendTo, obj){
     let el = document.createElement(element);
@@ -42,14 +70,35 @@ var x = createHelper("IMG","brand_logo",logo_container);
   x.setAttribute("src", "image/pri.jpg");
   x.setAttribute("width", "");
   x.setAttribute("height", "228");
-  let ddflex = createHelper("div","d-flex justify-content-center form_container",card)
+  let ddflex = createHelper("div","d-flex justify-content-center form_container",card);
 let form = createHelper("form", "", dflex);
-// let input =createHelper("input-group mb-3",)
-
-
-let input = createHelper("input","input-field", form, {type:"text",placeholder:"username",id:"user"}
+// let input =createHelper("input-group mb-3",);
+ form.addEventListener('submit',(evt)=>{
+   evt.preventDefault();
+  return validation()
+});
+let group =createHelper( "div","input-group mb-2 mt-5",form);
+let span = createHelper("span","",form,{id:"emailids"});
+let icon_user = createHelper("i", "fa fa-user icon mt-4" ,group );
+let user = createHelper("input","input-field mt-4", group, {type:"text",placeholder:"username",id:" emails"  }
 );
 
+let group1 = createHelper( "div","input-group mb-1 mt-3",form);
+let span1 = createHelper("span","",form,{id:"password"});
+let icon = createHelper( "i", "fa fa-key icon" ,group1 );
+let input = createHelper("input","input-field", group1, {type:"password",placeholder:"password",id:"pass"}
+);
+
+let checkbox = createHelper("card", "form-group ",form);
+let label = createHelper ("label","custom-control-label ml-4" ,checkbox, {innerHTML:"Remember me"})
+// let  chek = createHelper("input","custom-control custom-checkbox",checkbox,{type:"checkbox",});
+let input1 = createHelper ("input","custom-control-input",checkbox);
+
+
+let justify = createHelper ("card","d-flex justify-content-center mt-3 login_container",input1);
+let button = createHelper ("button", "btn login_button mt-2 ",form,{type:"submit",value:"submit",innerHTML:"submit"});
+//  let pare = createHelper( "card", "mt-4", button);
+// let  pare1 = createHelper ("card","d-flex justify-content-center links",pare ,{innerHTML:"text" ,value:"ghdgj"});
 
 //flex.innerHTML ="me working!!!"
 
@@ -75,39 +124,6 @@ let input = createHelper("input","input-field", form, {type:"text",placeholder:"
             // }
             
             </script>
-            <script>
-                    function validation() {
-                        var user = document.getElementById('user').value;
-                        var psw = document.getElementById('psw').value;
             
-                        if (user == "") {
-                            document.getElementById('username').innerHTML = "Please fill the username field!!";
-                            return false;
-                        }
-                       if(user.indexOf('@') <= 0){
-                        document.getElementById('username').innerHTML = " @  Invali Position";
-                            return false;
-                       }
-                       if((user.charAt(user.length-4)!='.') && (user.charAt(user.length-4)!='.')){
-                        document.getElementById('username').innerHTML = " .  Invali Position";
-                            return false;
-                       }
-
-
-
-
-                        if (psw == "") {
-                            document.getElementById('password').innerHTML = "please fill the password field";
-                            return false;
-                        }
-                        if((psw.length <=8) || (psw.length >20)){
-                            document.getElementById('password').innerHTML = "Password must be between 8-20 character!!";
-                            return false;
-                        }
-                        document.getElementById('username').innerHTML = "";
-                        document.getElementById('password').innerHTML = "";
-                    }
-                </script>
-          
 </body>
 </html>
