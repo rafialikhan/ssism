@@ -46,9 +46,7 @@ Tip: you may have to look at Object keys for this.
 - Pass the filter criteria - filterBy = {location: "Bangladesh"}
 - Reduce criteria ie. totalBy = {gender: "male"} 
 
-eg. 
-```
-myTaskFunction(removeItems, filterBy, totalBy){
+eg. myTaskFunction(removeItems, filterBy, totalBy){
 {
 ........
 // Apply conditions of remove, loc
@@ -60,4 +58,3 @@ myTaskFunction(removeItems, filterBy, totalBy){
          }
 }
 
-```

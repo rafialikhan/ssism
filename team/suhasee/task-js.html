@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task-js</title>
+    <script type="text/javascript" src="../task-js.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        //task 1
+        //map the details and remove id and company
+
+        //by map function
+        // var office = [];
+        // details.map(function(data) {
+        //     office.push(data.name, data.yob, data.gender, data.location);
+        //     return office;
+        // });
+        // console.log(office);
+
+        //by foreach function 
+        var office = [];
+        details.forEach(function(item) {
+            office.push(item.name, item.yob, item.gender, item.location);
+            return office;
+        });
+        console.log(office);
+
+        //task 2
+        //filter to get the location is india 
+
+        var indianpeople = details.filter(function(detail) {
+            return detail.location === "India";
+        });
+        console.log(indianpeople);
+
+        //filter to get the loction but not the id and company
+        var peopleInIndia = office.filter(function(detail) {
+            return detail.location === "India";
+        });
+        console.log(peopleInIndia);
+
+
+        //filter to get the people whose yod is greater than 2000
+        var yobpeople = details.filter(function(detail) {
+            return detail.yob > 2000;
+        });
+        console.log(yobpeople);
+
+
+        //task3
+        //reduce to get all the number of females
+        var totalfemales = details.reduce(function(sum, detail) {
+            return sum + (detail.gender === "female");
+        }, 0);
+        console.log(totalfemales);
+
+
+
+        //additional task i.e task 4
+
+        var total = details
+            .filter(function(data) {
+                return data.location === "Bangladesh";
+            })
+            .map(function(detail) {
+                return detail.name + detail.gender + detail.location;
+            })
+            .reduce(function(sum, detail) {
+                return sum + (detail.gender === "male")
+            }, 0);
+
+        console.log(total);
+    </script>
+
+</body>
+
+</html>
