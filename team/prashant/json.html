@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../task-js.js"></script>
+</head>
+
+<body>
+    <p>its work.</p>
+    <script>
+        //task 1
+        var getDetails = [];
+        details.forEach(function(detail) {
+            getDetails.push(detail.name, detail.yob, detail.location, detail.gender);
+            return getDetails
+
+        });
+        //task2
+        console.log(getDetails);
+        var getIndia = details.filter(function(detail) {
+            return detail.location === "India";
+
+        });
+        //task3
+        console.log(getIndia);
+
+        var yob = details.filter(function(detail) {
+            return detail.yob > 2000;
+
+        });
+        // task4
+        console.log(yob);
+        var allFemale = details.reduce(function(overall, detail) {
+            return overall + (detail.gender === "female")
+
+        }, 0);
+        console.log(allFemale);
+
+        //var totalTask = details
+        // .filter(function (first) {
+        // return first.;
+        // })
+    </script>
+
+</body>
+
+</html>
+
+</html>
+
+</html>
