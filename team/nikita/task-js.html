@@ -6,27 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <!-- <script type="text/javascript" src="./task.json" ></script> -->
-        <script type="text/javascript" src="../task-js.js" ></script>
+        <script type="text/javascript" src="../task-js.js"></script>
     </head>
     <body>
         <script>  
 
         // task 1   by foreach    
-        var getDetails = [];
-                details.forEach(function (detail) {
-                    getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
-                    return getDetails
-        }); 
+        var getDetails =
+        // details.forEach(function (detail) {
+        //     getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
+        //     return getDetails
+        // }); 
 
         // task 1 by map 
 
-        // details.map(function (detail){
-        //     getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
-        //             return getDetails
-        // });
+        details.map(function (detail){
+            // getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
+                    return {
+                        'name':detail.name,
+                        'yob':detail.yob,
+                        'location':detail.location,
+                        'gender':detail.gender
+                    };
+        });
 
 
             console.log(getDetails); 
+            console.table(getDetails)
 
 
         // task 2 filter of people living in india  from detail array
@@ -63,19 +69,48 @@
 
         // additional task 
 
-        var AdditionalTask = details
-        .filter(function(detail){
+        
+        // .filter(function(detail){
+        //     return detail.location ==="Bangladesh";
+        // })
+        // .map(function(detail){
+        //     return  detail.name + ' ' + detail.location + ' ' +  detail.gender;
+        // })
+        // var additionalTask = details.reduce(function(sum , detail){
+        //     return sum + (detail.gender === "male")
+        // },0);
+        // console.log(additionalTask)
+
+        // name, location, gender
+
+
+            var allData;
+        function getMappedData(){
+            var locationArray = details.filter(function(detail){
             return detail.location ==="Bangladesh";
         })
-        .map(function(detail){
-            return  detail.name+detail.location + detail.gender;
-        })
-        .reduce(function(sum , detail){
-            return sum + (detail.gender === "male")
+        var mappedData = details.map(function(detail){
+            return {
+                'name':detail.name,
+                'location' : detail.location,
+                'gender': detail.gender
+            };
+        });
+        var totalNoOfGenders = details.reduce(function(sum , detail){
+            return sum + (detail.gender === "male");
         },0);
+            allData = {
+                'filter':locationArray,
+                'mapped':mappedData,
+                'reduce': totalNoOfGenders
+            }
+        }
+        getMappedData();
+        console.log(allData)
+       
 
-        console.log(AdditionalTask);
+
+      
         </script>
-   
     </body>
 </html>
