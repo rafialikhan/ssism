@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="../task-js.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        //filter in prason
+      var javscriptPersons = details.filter(
+        detailObj => detailObj.location.indexOf("India") > -1
+      );
+      //es5 style
+      var javscriptPersons = details.filter(function(detailObj) {
+        return detailObj.location.indexOf("India") > -1;
+      });
+      console.log(javscriptPersons);
+      var evenNumbers1 = [];
+      details.forEach(details => {
+        if (details.yob > 2000) {
+          evenNumbers1.push(details);
+        }
+      });
+      console.log(evenNumbers1);
+    //Reduce task//
+      var femaleArray = details.reduce(function(accumulator,detail){
+        return accumulator+(detail.gender === "female")
+    },0);
+    console.log(femaleArray);
+   // map task //
+       var studentsDetail =[];
+details.forEach(function(someDetail){
+    studentsDetail.push(someDetail.name);
+    studentsDetail.push(someDetail.gender);
+    studentsDetail.push(someDetail.location);
+    studentsDetail.push(someDetail.yob);
+
+});
+console.log(studentsDetail);
+//Additional Task//
+
+</script>
+  </body>
+</html>
