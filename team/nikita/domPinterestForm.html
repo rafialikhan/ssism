@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>DOM task 1</title>
+        <title>Task2</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css"
             href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css"
             href="bootstrap-4.3.1-dist/css/bootstrap.css">
         <link rel="stylesheet"
@@ -15,6 +15,57 @@
     </head>
 
     <body class="bg">
+       
+<script>
+function createHelper( element, className, elementToAppendTo, obj){
+    let el = document.createElement(element);
+    
+    if(className!==""){
+        el.className = className;
+    }
+
+    for(key in obj){
+       // console.log(key, obj[key]);
+      el[key] = obj[key]
+    }
+   
+    elementToAppendTo.appendChild(el);
+    return el;
+}
+
+let container = createHelper("div", "container h-100 mt-5" , document.body );
+let flex = createHelper("div", "d-flex justify-content-center h-100" , container)
+
+let form = createHelper("form", "", flex );
+
+let input = createHelper("input","input-field", form, {type:"text",placeholder:"username",id:"user"}
+);
+
+
+//flex.innerHTML ="me working!!!"
+
+// let container = document.createElement("div");
+// container.className="container h-100 mt-5";
+// document.body.appendChild(container);
+
+// let flex = document.createElement("div");
+// flex.className="d-flex justify-content-center h-100";
+// container.appendChild(flex);
+
+
+
+
+            // function myFunction() {
+            // //   var txt;
+            //   if (confirm("Really want to save!")) {
+            //     txt = "You pressed OK!";
+            //   } else {
+            //     txt = "You pressed Cancel!";
+            //   }
+            // //   document.getElementById("demo").innerHTML = txt;
+            // }
+            
+            </script>
             <script>
                     function validation() {
                         var user = document.getElementById('user').value;
@@ -48,87 +99,6 @@
                         document.getElementById('password').innerHTML = "";
                     }
                 </script>
-       
-<script>
-function createHelper( element, className, elementToAppendTo, obj){
-    let el = document.createElement(element);
-    
-    if(className!==""){
-        el.className = className;
-    }
-
-    for(key in obj){
-       // console.log(key, obj[key]);
-      el[key] = obj[key]
-    }
-   
-    elementToAppendTo.appendChild(el);
-    return el;
-}
-
-let container = createHelper("div", "container h-100 mt-5" , document.body );
-let flex = createHelper("div", "d-flex justify-content-center h-100" , container);
-let card = createHelper("div", "user_card" , flex);
-let dflex = createHelper("div", "d-flex justify-content-center" , card);
-let image = createHelper("div", "brand-logo-container" , dflex);
-var x = createHelper("IMG","",image);
-  x.setAttribute("src", "images/download.png");
-  x.setAttribute("width", "304");
-  x.setAttribute("height", "228");
-let dflex_1= createHelper("div","d-flex justify-content-center form-controller" ,card)
-let form = createHelper("form", "", dflex_1  );
- 
-form.addEventListener("submit" , (evt)=>{ 
-    evt.preventDefault();
-
-    return validation();
-    } );
-
-let input = createHelper("div", "input-container" , form);
-let icon_user = createHelper("i", "fa fa-user icon" , input);
-let user = createHelper("input","input-field", input, {type:"text",placeholder:"Username or Email",id:"user"  }
-);
-let span = createHelper("span","text-danger mt-0",form ,{id:"username"});
-let input_1 = createHelper("div", "input-container" , form);
-let icon_password = createHelper("i","fa fa-key icon" , input_1)
-let password = createHelper("input","input-field", input_1, {type:"password",placeholder:"Password",id:"psw"}
-);
-let span_1 = createHelper("span","text-danger mt-0",form ,{id:"password"})
-let input_checkbox = createHelper("div", "input-container form-check" , form);
-let checkbox = createHelper("input" , "form-check-input" , input_checkbox,{type:"checkbox"});
-let label = createHelper("label" , "form-check-label" , input_checkbox,{innerHTML:"Remember me"} );
-let btn_container = createHelper("div" ,  "btn-container" , form);
-let button = createHelper("button", "btn btn-block", btn_container, {id:"btn", value:"submit"});
-button.innerHTML="submit";
-// let = d_flex = createHelper("div", "d-flex justify-content-center links",)
-
-
-
-//flex.innerHTML ="me working!!!"  
-
-// let container = document.createElement("div");
-// container.className="container h-100 mt-5";
-// document.body.appendChild(container);
-
-// let flex = document.createElement("div");
-// flex.className="d-flex justify-content-center h-100";
-// container.appendChild(flex);
-
-
-
-
-            // function myFunction() {
-            // //   var txt;
-            //   if (confirm("Really want to save!")) {
-            //     txt = "You pressed OK!";
-            //   } else {
-            //     txt = "You pressed Cancel!";
-            //   }
-            // //   document.getElementById("demo").innerHTML = txt;
-            // }
-            
-            </script>
-            
           
 </body>
 </html>

@@ -1,13 +1,13 @@
 .card-container{
-    width:25rem;
+    width:18rem;
     perspective: 200rem;
     position: relative;
-    height: 445px;
+    height: 412px;
     border: none;
 }
 img{
-    margin-top: 100px;
-    margin-left: 80px;
+    margin-top: 80px;
+    margin-left: 20px;
 }
 .card-container:hover .card-front{
     transform:rotateY(180deg);
@@ -24,17 +24,13 @@ img{
     transition: all 0.9s;
     position: absolute;
     height: 100%;
-    width: 500px;
+    width: 100%;
     backface-visibility: hidden;
-    box-shadow: 5px 5px 5px 5px gainsboro;
-    border-radius:70px 0px 70px 0px;
+    border: none;
 }
 
 .bottom-right {
     position: absolute;
     bottom: 8px;
     right: 16px;
-  }
-  .btn{
-      border-radius:70px 70px 70px 70px;
   }
