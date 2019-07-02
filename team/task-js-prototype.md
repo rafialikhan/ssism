@@ -23,8 +23,8 @@ let prashant = new myPersonObject("Prashant", 18, "male");
 
 console.log(suhasee);
 ```
-Now we know we have name age and gender, but lets say I forgot OR the original Object was created by someone else
-but i need this one new function to get whoami from our myPersonObject, which would combine all the paramters and return a 
+Now we know we have name age and gender, but lets say we forgot OR the original Object was created by someone else
+but we need this one new function to get whoami from our myPersonObject, which would combine all the paramters and return a 
 nice string; 
 
 Try
@@ -43,21 +43,7 @@ So lets write a prototype called whoami.
 myPersonObject.prototype.whoami = function(){
  return "I am "+ this.name + ", and I am a "+ this.age + " year old " + this.gender; 
 }
-
-
-// You can return like regular functions or you can just assign it to a new property and use it later.
-/*
-myPersonObject.prototype.whoami = function(){
- this.whoami = "I am "+ this.name + ", and I am a "+ this.age + " year old " + this.gender; 
-}
-piyush.whoami(); // You have to call the function first to assign it to this.whoami and then call it again 
-console.log(piyush);
-*/
-
-console.log(laveena.whoami()); //
-console.log(laveena); // expand the arrow, notice whoami - along with thee function when you open ___proto__: Object
 ```
-
 Expand the console output and you will see something called ___proto__: Object expand that and you will see the
 function who am i there. 
 
@@ -72,10 +58,9 @@ console.log(laveena.whoami());
 console.log(sonakshi.whoami());
 console.log(piyush.whoami());
 console.log(prashant.whoami());
-
-
-
+console.log(suhasee.whoami());
 ```
+
 So even though we created all the above objects (suhasee, nikita and so on...) much before we added the prototype. 
 You can see that now all objects get the function added to its properties. Thats the power of the prototype. :-)
 
@@ -132,7 +117,7 @@ and Arrays.
 ## Task - create a prototype for Javascript's Array 
 
 - Called _htmlTable 
-- ie. Array.prototpe._htmlTable
+- ie. Array.prototype._htmlTable
 - It should take an argument of the div to which it needs to append the output.
 - It should generate an HTML table, like the one you generated for the MAP table. (Nikita' please push)
 - So you can basically use everything from your yesterday's task 
