@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- <script type="text/javascript" src="./task.json" ></script> -->
+        <script type="text/javascript" src="../task-js.js" ></script>
+    </head>
+    <body>
+        <script>  
+
+        // task 1   by foreach    
+        var getDetails = [];
+                details.forEach(function (detail) {
+                    getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
+                    return getDetails
+        }); 
+
+        // task 1 by map 
+
+        // details.map(function (detail){
+        //     getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
+        //             return getDetails
+        // });
+
+
+            console.log(getDetails); 
+
+
+        // task 2 filter of people living in india  from detail array
+
+        var peopleInIndia = details.filter(function (detail){
+        return detail.location === "India"
+        });
+        console.log(peopleInIndia);
+
+        // filter of people living in india without id and company
+        
+        
+        var indianPeople = getDetails.filter(function (detail){
+        return getDetails.location === "India"
+        });
+        console.log(indianPeople);
+
+
+        // filter of yob of people greater than 2000
+
+        var greaterYob = details.filter(function(detail){
+            return detail.yob>2000;
+        }) ;
+            console.log(greaterYob);
+
+
+
+        // reduce count no. of female
+
+        var totalFemale = details.reduce(function (accumulator, detail) {
+         return accumulator + (detail.gender === "female")
+        }, 0);
+        console.log(totalFemale);
+
+        // additional task 
+
+        var AdditionalTask = details
+        .filter(function(detail){
+            return detail.location ==="Bangladesh";
+        })
+        .map(function(detail){
+            return  detail.name+detail.location + detail.gender;
+        })
+        .reduce(function(sum , detail){
+            return sum + (detail.gender === "male")
+        },0);
+
+        console.log(AdditionalTask);
+        </script>
+   
+    </body>
+</html>

@@ -1,4 +1,4 @@
-var details = [
+ details = [
     {
       _id: '5d18e9f8fd345b4cdf11eb19',
       name: 'Diaz',
