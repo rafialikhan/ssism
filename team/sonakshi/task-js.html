@@ -6,9 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script type="text/javascript" src="../task-js.js"></script>
     <title>Document</title>
+    <script src="cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <link href="cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   </head>
   <body>
+        <table id="tblReportResultsDemographics" class="display" width="100%"></table>
     <script>
+
+function LoadCurrentReport(oResults) {
+ 
+ var details  = oResults.lDemographicItems; //
+ var jsonString = JSON.stringify(details) //for testing
+  
+//Load  datatable
+ var oTblReport = $("#tblReportResultsDemographics")
+
+ oTblReport.DataTable ({
+     "data" : jsonString,
+     "columns" : [
+         { "data" : "Id" },
+         { "data" : "name" },
+         { "data" : "gender" },
+         { "data" : "loctions" },
+         { "data" : "yob" },
+         { "data" : "company" },
+       
+     ]
+ });
+}
+
         //filter in prason
       var javscriptPersons = details.filter(
         detailObj => detailObj.location.indexOf("India") > -1
@@ -17,19 +43,19 @@
       var javscriptPersons = details.filter(function(detailObj) {
         return detailObj.location.indexOf("India") > -1;
       });
-      console.log(javscriptPersons);
+      console.table(javscriptPersons);
       var evenNumbers1 = [];
       details.forEach(details => {
         if (details.yob > 2000) {
           evenNumbers1.push(details);
         }
       });
-      console.log(evenNumbers1);
+      console.table(evenNumbers1);
     //Reduce task//
       var femaleArray = details.reduce(function(accumulator,detail){
         return accumulator+(detail.gender === "female")
     },0);
-    console.log(femaleArray);
+    console.table(femaleArray);
    // map task //
        var studentsDetail =[];
 details.forEach(function(someDetail){
@@ -39,7 +65,7 @@ details.forEach(function(someDetail){
     studentsDetail.push(someDetail.yob);
 
 });
-console.log(studentsDetail);
+console.table(studentsDetail);
 //Additional Task//
 
 </script>

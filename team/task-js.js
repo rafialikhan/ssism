@@ -796,4 +796,7 @@ var details = [
       yob: 2006,
       company: 'XUMONK'
     }
-  ]
+  ];
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
