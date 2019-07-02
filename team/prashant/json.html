@@ -41,21 +41,21 @@
         }, 0);
         console.log(allFemale);
 
-       // var totalTask = details
-       // .filter(function (first) {
-       // return first.;
-       //  })
-       
+        // var totalTask = details
+        // .filter(function (first) {
+        // return first.;
+        //  })
+
 
 
         //additional task i.e task 4
         var overAllData;
 
-        function getMappedData() {
+        function getData() {
             var locationArray = details.filter(function(detail) {
                 return detail.location === "Bangladesh";
             })
-            var mappeddata = details.map(function(detail) {
+            var mapdata = details.map(function(detail) {
 
                 return {
                     'name': detail.name,
@@ -68,14 +68,14 @@
             }, 0);
             allData = {
                 'filter': locationArray,
-                'mapped': mappeddata,
+                'mapped': mapdata,
                 'reduce': totalNoofGenders
             }
         }
-        getMappedData();
-        console.log(overAllData);
+        getData();
+        console.log(allData);
     </script>
-       
+
     </script>
 
 </body>
