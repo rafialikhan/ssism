@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title></title>
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+integrity="sha84-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+<link rel="stylesheet"
+href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+crossorigin="anonymous">
+<link href="style/zolltest2.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="container h-100">
+<div class="d-flex justify-content-center h-100">
+<div class="card">
+<div class="d-flex justify-content-center">
+<div class="logo_container">
+<img src="image/pri.jpg" class="brand_logo" alt="Logo">
+</div>
+</div>
+<div class="d-flex justify-content-center form_container">
+<form action="/action.php" onsubmit="return validation()">
+<div class="input-group mb-3">
+<div class="input-group-append">
+<span class="input-group-text"><i class="fas fa-user"></i></span>
+</div>
+<input type="text" name="" class="form-control input_user" value=""
+placeholder="Username" id="emails" autocomplete="off">
+</div>
+<span id="emailids" class="text-danger "></span>
+<div class="input-group mb-2">
+<div class="input-group-append">
+<span class="input-group-text"><i class="fas fa-key"></i></span>
+</div>
+<input type="password" name="" class="form-control"
+placeholder="Password" id="pass" autocomplete="off">
+</div>
+<span id="password" class="text-danger "></span>
+<div class="form-group">
+<div class="custom-control custom-checkbox">
+<input type="checkbox" class="custom-control-input" id="customControlInline">
+<label class="custom-control-label" for="customControlInline"
+autocomplete="off">Remember me</label>
+</div>
+</div>
+</div>
+<div class="d-flex justify-content-center mt-3 login_container">
+<button type="submit" name="submit" value="submit" class="btn
+login_button ">Login</button>
+</div>
+<div class="mt-4">
+<div class="d-flex justify-content-center links">
+Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+</div>
+<div class="d-flex justify-content-center links">
+<a href="#">Forgot your password?</a>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+function validation() {
+
+var emails = document.getElementById('emails').value;
+var pass = document.getElementById('pass').value;
+
+
+if (emails == "") {
+document.getElementById('emailids').innerHTML = "Please fill the emaiids field";
+return false;
+}
+if (emails.indexOf('@') <= 0) {
+document.getElementById('emailids').innerHTML = "@ Invalid Position";
+return false;
+}
+if ((emails.charAt(emails.length - 4) != '.') &&
+(emails.charAt(emails.length - 3) != '.')) {
+document.getElementById('emailids').innerHTML = ". Invalid Position";
+return false;
+}
+if (pass == "") {
+document.getElementById('password').innerHTML = "Please fill the
+password field";
+return false;
+}
+if ((pass.length <= 8) || (pass.length >= 15)) {
+document.getElementById('password').innerHTML = "user length must be
+between 8 and 15 ";
+return false;
+}
+}
+</script>
+</body>
+
+</html>

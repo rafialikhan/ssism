@@ -1,0 +1,30 @@
+.huuu{
+    color:white;
+    font-family: cursive;
+
+    
+}
+#son{
+    background-color: black;
+   
+  
+     /* margin-top: 120px;
+    margin-left: 280px;  */
+}
+::placeholder{
+    color:black;
+}
+#jii{
+padding: 30px;
+background-color: black;
+}
+#son{
+    border-radius: 7px;
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-top: 100px; /* Added */
+    box-shadow: 3px 11px 40px -5px rgba(0,0,0,0.51);
+    
+}
