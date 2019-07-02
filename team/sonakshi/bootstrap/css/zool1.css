@@ -1,0 +1,28 @@
+.book{
+background-color: #C0BCBC
+;
+}
+#home{
+	
+}
+.human{
+	background-color: red;
+}
+#brand{
+	color: white;
+	font-size: 35px;
+	font-family: sans-serif;
+}
+.btn-primary{
+	float: right;
+}
+#foot{
+	
+	background-color: #F98909;
+
+}
+#usr{
+	border-bottom: 1px solid blue;
+	border: none;
+	background: transparent;
+}

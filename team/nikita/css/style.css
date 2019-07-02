@@ -1,0 +1,72 @@
+*{box-sizing: border-box;
+}
+
+.bg{
+    background-color: #60a3bc;
+}
+
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .icon {
+    padding: 15px;
+    background: #bf2b2b;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  /* Style the input fields */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+   
+  }
+
+  /* button styling */
+
+  #btn{
+    background-color:#bf2b2b;
+    color: white;
+    width: 100%;
+  }
+ 
+ .user_card{
+     margin-bottom: auto;
+     margin-top: 60px;
+     background: #f39c12;
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     padding: 20px;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px o rgba(0,0,0,0.19);
+     border-radius: 6px;
+     /* height: 490px; */
+     width: 380px;
+ }
+ .brand-logo-container{
+     position: absolute;
+     height: 220px;
+     width: 220px;
+    top:-75px;
+     border-radius:50%;
+     background: #60a3bc;
+     padding:10px;
+ }
+ img{
+     height: 200px;
+     width: 200px;
+     border-radius: 50%;
+        
+     
+ }
+ .form-controller{
+     margin-top: 180px;
+ }
+ .custom-checkbox .custom-control-input:checked~.custom-label::before{
+   background-color: #bf2b2b;
+ }

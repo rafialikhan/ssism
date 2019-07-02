@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Task2</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" type="text/css"
+         href="bootstrap/css/bootstrap.min.css">
+      <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+      <link rel="stylesheet" type="text/css"
+         href="bootstrap/css/bootstrap.css">
+      <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="zolltest2.css" rel="stylesheet"/>
+   </head>
+   <body class="bg">
+    <script>
+        function validation() {
+            //console.dir(document.getElementById('user').value);
+
+        var user = document.getElementById('user').value;
+        var password = document.getElementById('password').value;
+        if (user == "") {
+        document.getElementById('username').innerHTML = "Please fill the username field!!";
+        return false;
+        }
+        if(user.indexOf('@') <= 0){
+        document.getElementById('username').innerHTML = " @ Invali Position";
+        return false;
+        }
+        if((user.charAt(user.length-4)!='.') && (user.charAt(user.length-4)!='.')){
+        document.getElementById('username').innerHTML = " . Invali Position";
+        return false;
+        }
+        
+        
+        
+        
+        if (password == "") {
+        document.getElementById('password').innerHTML = "please fill the password field";
+        return false;
+        }
+        if((password.length <=8) || (password.length >20)){
+        document.getElementById('password').innerHTML = "Password must be between 8-20 character!!";
+        return false;
+        }
+        document.getElementById('username').innerHTML = "";
+        document.getElementById('password').innerHTML = "";
+        }
+     </script>
+
+<script>
+         function createHelper( element, className, elementToAppendTo, obj){
+         let el = document.createElement(element);
+         if(className!==""){
+         el.className = className;
+         }
+         
+         for(key in obj){
+         // console.log(key, obj[key]);
+         el[key] = obj[key]
+         }
+         elementToAppendTo.appendChild(el);
+         return el;
+         }
+         
+         let container = createHelper("div", "container h-100 mt-5" , document.body );
+         let flex = createHelper("div", "d-flex justify-content-center h-100" ,
+         container)
+         let card = createHelper("div","card" , flex);
+         let dflex = createHelper("div","d-flex justify-content-center", card);
+         let logo_container = createHelper("div", "logo_container", dflex);
+         var x = createHelper("IMG","brand_logo",logo_container);
+         x.setAttribute("src", "image/pri.jpg");
+         x.setAttribute("width", "");
+         x.setAttribute("height", "228");
+         let ddflex = createHelper("div","d-flex justify-content-center form_container",card);
+         let form = createHelper("form", "", dflex, {method:"post"});
+         
+         form.addEventListener("submit", (evt)=> {
+             evt.preventDefault();
+             return validation();})
+
+         // let input =createHelper("input-group mb-3",)
+         
+         let group =createHelper( "div","input-group mb-3",form);
+         let icon_user = createHelper("i", "fa fa-user icon" ,group );
+         let user = createHelper("input","input-field", group,
+         {type:"text",placeholder:"username",id:"user"});
+         let span = createHelper("span" , "text-danger" ,form ,{id:"username"});
+
+        //  user.setAttribute("value", "prashant");
+
+         
+         let group1 =createHelper( "div","input-group mb-2",form);
+         let icon = createHelper( "i", "fa fa-key icon" ,group1 );
+         let input = createHelper("input","input-field", group1,
+         {type:"password",placeholder:"password",id:"psw"}
+         );
+         let span_1 = createHelper("span" , "text-danger" ,form ,{id:"password"});
+         let checkbox = createHelper("div","from-group",form);
+         let label = createHelper("label","custom-control-label",checkbox,{innerHTML:"remember me"});
+         let check = createHelper("input","custom-control-input",checkbox);
+
+         let justify = createHelper ("div","d-flex justify-content-center mt-3 login_container",check);
+        let button = createHelper ("button", "btn login_button",form,{type:"submit",value:"submit",innerHTML:"submit"});
+
+         
+         
+    
+      </script>
+
+   </body>
+</html>
+     
+         
+//flex.innerHTML ="me working!!!"
+         
+// let container = document.createElement("div");
+// container.className="container h-100 mt-5";
+// document.body.appendChild(container);
+
+// let flex = document.createElement("div");
+// flex.className="d-flex justify-content-center h-100";
+// container.appendChild(flex);
+
+
+
+
+// function myFunction() {
+// // var txt;
+// if (confirm("Really want to save!")) {
+// txt = "You pressed OK!";
+// } else {
+// txt = "You pressed Cancel!";
+// }
+// // document.getElementById("demo").innerHTML = txt;
+// }
