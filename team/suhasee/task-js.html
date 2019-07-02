@@ -17,20 +17,29 @@
         //map the details and remove id and company
 
         //by map function
+        var office =
+            details.map(function(data) {
+                // office.push(data.name, data.yob, data.gender, data.location);
+                return {
+                    'name': data.name,
+                    'dateOfBirth': data.yob,
+                    'Gender': data.gender,
+                    'location': data.location
+                }
+            });
+        console.log(office);
+        console.table(office);
+
+        //by foreach function
+        // console.table(details);
+
         // var office = [];
-        // details.map(function(data) {
-        //     office.push(data.name, data.yob, data.gender, data.location);
+        // details.forEach(function(item) {
+        //     office.push(item.name, item.yob, item.gender, item.location);
         //     return office;
         // });
-        // console.log(office);
+        // console.table(office);
 
-        //by foreach function 
-        var office = [];
-        details.forEach(function(item) {
-            office.push(item.name, item.yob, item.gender, item.location);
-            return office;
-        });
-        console.log(office);
 
         //task 2
         //filter to get the location is india 
@@ -64,19 +73,31 @@
 
 
         //additional task i.e task 4
+        var allData;
 
-        var total = details
-            .filter(function(data) {
-                return data.location === "Bangladesh";
+        function getMappedData() {
+            var locationArray = details.filter(function(detail) {
+                return detail.location === "Bangladesh";
             })
-            .map(function(detail) {
-                return detail.name + detail.gender + detail.location;
-            })
-            .reduce(function(sum, detail) {
-                return sum + (detail.gender === "male")
+            var mappeddata = details.map(function(detail) {
+
+                return {
+                    'name': detail.name,
+                    'location': detail.location,
+                    'gender': detail.gender
+                };
+            });
+            var totalNoofGenders = details.reduce(function(sum, detail) {
+                return sum + (detail.gender === "male");
             }, 0);
-
-        console.log(total);
+            allData = {
+                'filter': locationArray,
+                'mapped': mappeddata,
+                'reduce': totalNoofGenders
+            }
+        }
+        getMappedData();
+        console.log(allData);
     </script>
 
 </body>
