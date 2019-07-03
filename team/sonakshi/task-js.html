@@ -6,34 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script type="text/javascript" src="../task-js.js"></script>
     <title>Document</title>
-    <script src="cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <link href="cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   </head>
   <body>
-        <table id="tblReportResultsDemographics" class="display" width="100%"></table>
+     
     <script>
 
-function LoadCurrentReport(oResults) {
+// function LoadCurrentReport(oResults) {
  
- var details  = oResults.lDemographicItems; //
- var jsonString = JSON.stringify(details) //for testing
+//  var details  = oResults.lDemographicItems; //
+//  var jsonString = JSON.stringify(details) //for testing
   
-//Load  datatable
- var oTblReport = $("#tblReportResultsDemographics")
+// //Load  datatable
+//  var oTblReport = $("#tblReportResultsDemographics")
 
- oTblReport.DataTable ({
-     "data" : jsonString,
-     "columns" : [
-         { "data" : "Id" },
-         { "data" : "name" },
-         { "data" : "gender" },
-         { "data" : "loctions" },
-         { "data" : "yob" },
-         { "data" : "company" },
+//  oTblReport.DataTable ({
+//      "data" : jsonString,
+//      "columns" : [
+//          { "data" : "Id" },
+//          { "data" : "name" },
+//          { "data" : "gender" },
+//          { "data" : "loctions" },
+//          { "data" : "yob" },
+//          { "data" : "company" },
        
-     ]
- });
-}
+//      ]
+//  });
+// }
 
         //filter in prason
       var javscriptPersons = details.filter(
@@ -67,7 +65,35 @@ details.forEach(function(someDetail){
 });
 console.table(studentsDetail);
 //Additional Task//
+var allData;
+        function getMappedData(){
+            var locationArray = details.filter(function(detail){
+            return detail.location ==="Bangladesh";
+        })
+        var mappedData = details.map(function(detail){
+            return {
+                'name':detail.name,
+                'location' : detail.location,
+                'gender': detail.gender
+            };
+        });
+        var totalNoOfGenders = details.reduce(function(sum , detail){
+            return sum + (detail.gender === "male");
+        },0);
+            allData = {
+                'filter':locationArray,
+                'mapped':mappedData,
+                'reduce': totalNoOfGenders
+            }
+        }
+        getMappedData();
+        console.log(allData);
+        
 
+        
+        // var arrHead = new Array();
+        // arrHead = [];
+        // arrHead.push(getMappedData);
 </script>
   </body>
 </html>

@@ -797,6 +797,6 @@
       company: 'XUMONK'
     }
   ];
-  $(document).ready( function () {
-    $('#myTable').DataTable();
-} );
+//   $(document).ready( function () {
+//     $('#myTable').DataTable();
+// } );
