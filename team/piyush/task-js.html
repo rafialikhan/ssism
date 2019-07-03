@@ -18,28 +18,35 @@
         var locationsIndia = details.filter(function (detailObj) {
             return detailObj.location.indexOf("India") > -1
         });
-        console.log(locationsIndia);
+        console.table(locationsIndia);
+        console.table(locationsIndia)
         // filter for location ends
 
         // filter for yob
-        var dob = details.filter(function (dob) {
+        var dob = details.filter(function (dob) { 
             return dob.yob > "2000";
         });
-        console.log(dob);
+        console.table(dob);
         // filter for yob ends
 
         // reduce for gender
         var totalFemale = details.reduce(function (accumulator, detail) {
             return accumulator + (detail.gender === "female");
         }, 0);
-        console.log(totalFemale);
+        console.table(totalFemale);
         // reduce for gender ends
 
         var someDetails = [];
 details.forEach(function (someDetail) {
     someDetails.push(someDetail.name,someDetail.gender,someDetail.location,someDetail.yob);
 });
-console.log(someDetails);
+console.table(someDetails);
+
+
+
+
+
+
 
 
 
