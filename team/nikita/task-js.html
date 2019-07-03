@@ -12,7 +12,7 @@
         <script>  
 
         // task 1   by foreach    
-        var getDetails =
+        var getDetails = 
         // details.forEach(function (detail) {
         //     getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
         //     return getDetails
@@ -112,5 +112,92 @@
 
       
         </script>
+<input type="button" value="Generate Table" onclick="GenerateTable()" />
+<hr />
+<div id="dvTable"></div>
+
+  
+<script type="text/javascript">
+
+    function GenerateTable() {
+
+        
+        //Build an array containing Customer records.
+    //     var array =[];
+    // array.push(getDetails);
+    // console.log(array);
+     
+//var custom = new Array();
+//custom.push([getDetails]);
+
+let custom = getDetails.sort((a,b)=>{
+    if ( a.name < b.name ){
+    return -1;
+  }
+  if ( a.name > b.name ){
+    return 1;
+  }
+  return 0;
+});
+
+
+// console.log(custom);
+
+        //Create a HTML Table element.
+        var table = document.createElement("TABLE");
+        table.border = "1";
+ 
+        //Get the count of columns.
+        var columnCount = 4;
+
+        let headers = [];
+        for(let key in custom[0]){
+            headers.push(key);
+        }
+
+        //headers = custom[0];
+ 
+        //Add the header row.
+        var row = table.insertRow(-1);
+        for (var i = 0; i < columnCount; i++) {
+            var headerCell = document.createElement("TH");
+            headerCell.innerHTML = headers[i];
+            row.appendChild(headerCell);
+        }
+ 
+        //Add the data rows.6
+        for (var i = 1; i < custom.length; i++) {
+            row = table.insertRow(-1);
+            for (var j = 0; j < columnCount; j++) {
+                var cell = row.insertCell();
+                cell.innerHTML = custom[i][headers[j]];
+            }
+        }
+ 
+        var dvTable = document.getElementById("dvTable");
+        dvTable.innerHTML = "";
+        dvTable.appendChild(table);
+    }
+</script>
+<script>
+function myPersonObject(name, age, gender) {
+  this.name = name,
+  this.age = age,
+  this.gender = gender
+}
+
+let suhasee = new myPersonObject("Suhasee", 18, "female");
+let nikita = new myPersonObject("Nikita", 18, "female");
+let laveena = new myPersonObject("Laveena", 18, "female");
+let sonakshi = new myPersonObject("Sonakshi", 18, "female");
+let piyush = new myPersonObject("Piyush", 18, "male");
+let prashant = new myPersonObject("Prashant", 18, "male");
+
+console.log(nikita);
+myPersonObject.prototype.whoami = function(){
+ return "I am "+ this.name + ", and I am a "+ this.age + " year old " + this.gender; 
+}
+console.log(sonakshi.whoami()); 
+</script>
     </body>
 </html>
