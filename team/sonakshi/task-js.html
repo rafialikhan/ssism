@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script type="text/javascript" src="../task-js.js"></script>
+    <script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <title>Document</title>
   </head>
   <body>
-     
+    <table id="tblReportResultsDemographics" class="display" width="100%"></table>
     <script>
 
 // function LoadCurrentReport(oResults) {
@@ -88,12 +94,21 @@ var allData;
         }
         getMappedData();
         console.log(allData);
-        
+        var javscriptPersonsTable = $("#tblReportResultsDemographics")
 
-        
-        // var arrHead = new Array();
-        // arrHead = [];
-        // arrHead.push(getMappedData);
+javscriptPersonsTable.DataTable({
+"data": javscriptPersons,
+"columns": [
+{ "data": "_id",
+"title" : "ID" },
+{ "data": "name" },
+{ "data": "gender" },
+{ "data": "location" },
+{ "data": "yob" }
+]
+})
+
+
 </script>
 <input type="button" value="Generate Table" onclick="GenerateTable()" />
 <hr />
@@ -161,7 +176,7 @@ let custom = javscriptPersons.sort((a,b)=>{
         dvTable.innerHTML = "";
         dvTable.appendChild(table);
     }
-</script>
+</script> 
 <script>
 function myPersonObject(name, age, gender) {
   this.name = name,
@@ -170,18 +185,36 @@ function myPersonObject(name, age, gender) {
 }
 
 let suhasee = new myPersonObject("Suhasee", 18, "female");
-let nikita = new myPersonObject("Nikita", 18, "female");
+let nikita = new myPersonObject("Nikita", 18, "female"); 
 let laveena = new myPersonObject("Laveena", 18, "female");
 let sonakshi = new myPersonObject("Sonakshi", 18, "female");
 let piyush = new myPersonObject("Piyush", 18, "male");
 let prashant = new myPersonObject("Prashant", 18, "male");
 
-console.log(nikita);
+console.log(suhasee);
+
 myPersonObject.prototype.whoami = function(){
  return "I am "+ this.name + ", and I am a "+ this.age + " year old " + this.gender; 
 }
-console.log(sonakshi.whoami()); 
-// console.log(nikita.whoami()); 
+console.log(sonakshi.whoami());
+// console.log(nikita.whoami());
+// console.log(laveena.whoami());
+// console.log(sonakshi.whoami());
+// console.log(piyush.whoami());
+// console.log(prashant.whoami());
+// console.log(suhasee.whoami());
+ //let speak = sonakshi.whoami(); // getting the text
+// window.speechSynthesis.speak(msg); // Calling window speechSynthesis to speak
+
+//let msg = new SpeechSynthesisUtterance(); // creating a new speechSynthesisUtterance
+let msg =  new SpeechSynthesisUtterance(prashant.whoami());
+var voices = window.speechSynthesis.getVoices();
+msg.voice = voices[10]; // try changing the number and hear different voices.
+msg.voiceURI = 'native';
+msg.volume = 1; // 0 to 1
+msg.rate = 1; // 0.1 to 10
+msg.pitch = 2; //0 to 2
+window.speechSynthesis.speak(msg)
 </script>
    
   </body>
