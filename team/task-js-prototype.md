@@ -15,7 +15,7 @@ function myPersonObject(name, age, gender) {
 }
 
 let suhasee = new myPersonObject("Suhasee", 18, "female");
-let nikita = new myPersonObject("Nikita", 18, "female");
+let nikita = new myPersonObject("Nikita", 18, "female"); 
 let laveena = new myPersonObject("Laveena", 18, "female");
 let sonakshi = new myPersonObject("Sonakshi", 18, "female");
 let piyush = new myPersonObject("Piyush", 18, "male");

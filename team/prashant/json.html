@@ -75,13 +75,46 @@
         getData();
         console.log(allData);
     </script>
+    <script>
+        function myPersonObject(name, age, gender) {
+            this.name = name,
+                this.age = age,
+                this.gender = gender
+        }
 
+        let suhasee = new myPersonObject("Suhasee", 18, "female");
+        let nikita = new myPersonObject("Nikita", 18, "female");
+        let laveena = new myPersonObject("Laveena", 18, "female");
+        let sonakshi = new myPersonObject("Sonakshi", 18, "female");
+        let piyush = new myPersonObject("Piyush", 18, "male");
+        let prashant = new myPersonObject("Prashant", 18, "male");
+
+        console.log(suhasee);
+        myPersonObject.prototype.whoami = function() {
+            return "I am " + this.name + ", and I am a " + this.age + " year old " + this.gender;
+        }
+        console.log(nikita.whoami());
+        console.log(laveena.whoami());
+        console.log(sonakshi.whoami());
+        console.log(piyush.whoami());
+        console.log(prashant.whoami());
+        console.log(suhasee.whoami());
+        //console.log(sonakshi.whoami());
+        let speak = sonakshi.whoami(); // getting the text
+        let msg = new SpeechSynthesisUtterance(speak); // creating a new speechSynthesisUtterance
+        window.speechSynthesis.speak(msg); // Calling window speechSynthesis to speak
+
+        //  var voices = window.speechSynthesis.getVoices();
+        //  msg.voice = voices[10]; // try changing the number and hear different voices.
+        // msg.voiceURI = 'native';
+        //  msg.volume = 1; // 0 to 1
+        // msg.rate = 1; // 0.1 to 10
+        //  msg.pitch = 2; //0 to 2
+
+        //  msg.text = prashant.whoami();
+        // window.speechSynthesis.speak(msg);
     </script>
 
 </body>
-
-</html>
-
-</html>
 
 </html>

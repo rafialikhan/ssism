@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+
+<head>
+    <title>hello</title>
+</head>
+
+<body>
+    <script>
+        voices = window.speechSynthesis.getVoices()
+        var utterance = new SpeechSynthesisUtterance("Hello World");
+        utterance.voice = voices[4];
+        utterance.lang = voices[4].lang;
+        window.speechSynthesis.speak(utterance);
+    </script>
+    <script>
+        window.speechSynthesis.onvoiceschanged = function() {
+            voices = window.speechSynthesis.getVoices()
+            var utterance = new SpeechSynthesisUtterance("Hello World");
+            utterance.voice = voices[4];
+            utterance.lang = voices[4].lang;
+            window.speechSynthesis.speak(utterance);
+        };
+    </script>
+</body>
+
+</html>
