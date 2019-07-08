@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../task-js.js"></script>
+    <title>Array Prototype</title>
+</head>
+
+<body>
+    <input type="button" value="Generate Table" onclick="GenerateTable()" />
+    <hr />
+    <div id="dvTable"></div>
+
+    <script>
+        // task 1   by foreach    
+        var getDetails =
+            // details.forEach(function (detail) {
+            //     getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
+            //     return getDetails
+            // }); 
+
+            // task 1 by map 
+
+            details.map(function(detail) {
+                // getDetails.push(detail.name , detail.yob, detail.location , detail.gender);
+                return {
+                    'name': detail.name,
+                    'yob': detail.yob,
+                    'location': detail.location,
+                    'gender': detail.gender
+                };
+            });
+
+
+        console.log(getDetails);
+    </script>
+    <script type="text/javascript">
+        function GenerateTable() {
+
+
+            //Build an array containing Customer records.
+            //     var array =[];
+            // array.push(getDetails);
+            // console.log(array);
+
+            //var custom = new Array();
+            //custom.push([getDetails]);
+
+            let custom = getDetails
+
+            // console.log(custom);
+
+            //Create a HTML Table element.
+            var table = document.createElement("TABLE");
+            table.border = "1";
+
+            //Get the count of columns.
+            var columnCount = 4;
+
+            let headers = [];
+            for (let key in custom[0]) {
+                headers.push(key);
+            }
+
+            //headers = custom[0];
+
+            //Add the header row.
+            var row = table.insertRow(-1);
+            for (var i = 0; i < columnCount; i++) {
+                var headerCell = document.createElement("TH");
+                headerCell.innerHTML = headers[i];
+                row.appendChild(headerCell);
+            }
+
+            //Add the data rows.6
+            for (var i = 1; i < custom.length; i++) {
+                row = table.insertRow(-1);
+                for (var j = 0; j < columnCount; j++) {
+                    var cell = row.insertCell();
+                    cell.innerHTML = custom[i][headers[j]];
+                }
+            }
+
+            var dvTable = document.getElementById("dvTable");
+            dvTable.innerHTML = "";
+            dvTable.appendChild(table);
+        }
+    </script>
+</body>
+
+</html>
