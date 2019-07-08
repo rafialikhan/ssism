@@ -37,56 +37,59 @@
 
       //let msg = new SpeechSynthesisUtterance(); // creating a new speechSynthesisUtterance
 
-
-
       function saySomething() {
+        var textData = {
+          name: "Nikita",
+          age: 19,
+          intro:
+            "I am Nikita and I am 18 years old. I come from Indore, India. My favourite passtime is playing chess."
+        };
 
-          let speak = prashant.whoami();
-          speak ="मैं सोनाक्षी हूं, और मैं एक 18 साल की महिला हूं";
-          let msg = new SpeechSynthesisUtterance(speak);
+        let speak = prashant.whoami();
+        //speak ="मैं सोनाक्षी हूं, और मैं एक 18 साल की महिला हूं";
+        speak = textData.intro; //"My name is " + textData.name + " and I am " + textData.age + " years old."
+        let msg = new SpeechSynthesisUtterance(speak);
 
+        var voices = window.speechSynthesis.getVoices();
+        setTimeout(() => {
+          console.log(window.speechSynthesis.getVoices());
 
-  var voices = window.speechSynthesis.getVoices();
-setTimeout(()=> {
-  console.log(window.speechSynthesis.getVoices());
-
-    voices = window.speechSynthesis.getVoices();
-
+          voices = window.speechSynthesis.getVoices();
           // let voice = voices[50]; // male voice
           msg.voice = voices[8]; // try changing the number and hear different voices.
           msg.voiceURI = "native";
           msg.volume = 1; // 0 to 1
           msg.rate = 1; // 0.1 to 10
           msg.pitch = 0; //0 to 2
-// function loadVoices(message) {
-//   const msg = new SpeechSynthesisUtterance();
+          // function loadVoices(message) {
+          //   const msg = new SpeechSynthesisUtterance();
 
-//   // checks the boolean
-//   if (maleVoice) {
-//     msg.voice = voices[4];
-//   } else {
-//     msg.voice = voices[3];
-    
-//   }
+          //   // checks the boolean
+          //   if (maleVoice) {
+          //     msg.voice = voices[4];
+          //   } else {
+          //     msg.voice = voices[3];
 
-//   msg.text = message;
-//   speechSynthesis.speak(msg);
-// };
-// loadVoices()
+          //   }
 
-// let voiceGender = voices[48];
-// function loadVoices(message) {
-//   const msg = new SpeechSynthesisUtterance();
-//   msg.voice = voiceGender // now a variable pointing to another.
-//   msg.text = message;
-//   speechSynthesis.speak(msg);
-// };
+          //   msg.text = message;
+          //   speechSynthesis.speak(msg);
+          // };
+          // loadVoices()
 
-//   if (transcript.includes('male voice')) {
-//     let message = ('I am now a man');
-//     let voiceGender = voices[50]; // changing the global variable
-//     loadVoices(message);
-//   }
+          // let voiceGender = voices[48];
+          // function loadVoices(message) {
+          //   const msg = new SpeechSynthesisUtterance();
+          //   msg.voice = voiceGender // now a variable pointing to another.
+          //   msg.text = message;
+          //   speechSynthesis.speak(msg);
+          // };
+
+          //   if (transcript.includes('male voice')) {
+          //     let message = ('I am now a man');
+          //     let voiceGender = voices[50]; // changing the global variable
+          //     loadVoices(message);
+          //   }
 
           console.log(msg);
           window.speechSynthesis.speak(msg);
@@ -97,9 +100,8 @@ setTimeout(()=> {
               "An error has occurred with the speech synthesis: " + event.error
             );
           };
-
-          },500);
-        }
+        }, 500);
+      }
     </script>
 
     <button onclick="saySomething()">Say Something</button>
