@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>task-js</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../task-js.js"></script>
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
 
 </head>
 
 <body>
-
+    <table id="tblReportResultsDemographics" class="display" width="100%"></table>
     <script>
         //task 1
         //map the details and remove id and company
@@ -114,7 +119,7 @@
             //var custom = new Array();
             //custom.push([getDetails]);
 
-            let custom = getDetails.sort((a, b) => {
+            let custom = office.sort((a, b) => {
                 if (a.name < b.name) {
                     return -1;
                 }
@@ -162,6 +167,31 @@
             dvTable.innerHTML = "";
             dvTable.appendChild(table);
         }
+
+        function LoadCurrentReport() {
+
+            //Load  datatable
+            var officetable = $("#tblReportResultsDemographics")
+
+            officetable.DataTable({
+                "data": office,
+                "columns": [{
+                    "data": "name",
+                    "title": "Name"
+                }, {
+                    "data": "Gender",
+                    "title": "Gender"
+                }, {
+                    "data": "location",
+                    "title": "Location"
+                }, {
+                    "data": "dateOfBirth",
+                    "title": "year_of_Birth"
+                }]
+            });
+        }
+
+        LoadCurrentReport()
     </script>
     <script>
         function myPersonObject(name, age, gender) {
@@ -182,7 +212,7 @@
         myPersonObject.prototype.whoami = function() {
             return "I am " + this.name + ", and I am a " + this.age + " year old " + this.gender;
         }
-        console.log(sonakshi.whoami());
+
         console.log(nikita.whoami());
         console.log(laveena.whoami());
         console.log(sonakshi.whoami());
@@ -194,14 +224,33 @@
         window.speechSynthesis.speak(msg); // Calling window speechSynthesis to speak
 
         var voices = window.speechSynthesis.getVoices();
-        msg.voice = voices[10]; // try changing the number and hear different voices.
+        msg.voice = voices[0]; // try changing the number and hear different voices.
         msg.voiceURI = 'native';
         msg.volume = 1; // 0 to 1
         msg.rate = 1; // 0.1 to 10
         msg.pitch = 2; //0 to 2
 
-        msg.text = prashant.whoami();
+        msg.text = piyush.whoami();
         window.speechSynthesis.speak(msg)
+            // msg.text = nikita.whoami();
+            // window.speechSynthesis.speak(msg)
+
+        // window.speechSynthesis.onvoiceschanged = () => {
+        //     const maleVoices = [
+        //         'Google US English Male',
+        //         'Microsoft David Desktop - English (United States)',
+        //     ];
+        //     const foundVoice = speechSynthesis.getVoices()
+        //         .find(({
+        //             name
+        //         }) => maleVoices.includes(name));
+        //     console.log('speaking');
+        //     speechSynthesis.cancel(); // sometimes needed due to Chrome's buggy implementation
+        //     const utter = new SpeechSynthesisUtterance('foo bar');
+        //     if (foundVoice) utter.voice = foundVoice;
+        //     else console.log('no voice found, using default');
+        //     speechSynthesis.speak(utter);
+        // };
     </script>
 
 
