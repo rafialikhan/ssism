@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prototype_table</title>
+    <script type="text/javascript" src="../task-js.js"></script>
+</head>
+
+<body>
+
+    <div id="dvTable"></div>
+
+    <script>
+        var office =
+            details.map(function(data) {
+                return {
+                    'name': data.name,
+                    'dateOfBirth': data.yob,
+                    'Gender': data.gender,
+                    'location': data.location
+                }
+            });
+
+        console.table(office);
+    </script>
+    <script>
+        Array.prototype._htmlTable = function(GenerateTable) {
+            console.log(this)
+
+            let custom = office.sort((a, b) => {
+                if (a.name < b.name) {
+                    return -1;
+                }
+                if (a.name > b.name) {
+                    return 1;
+                }
+                return 0;
+            });
+
+
+            // console.log(custom);
+
+            //Create a HTML Table element.
+            var table = document.createElement("TABLE");
+            table.border = "1";
+
+            //Get the count of columns.
+            var columnCount = 4;
+
+            let headers = [];
+            for (let key in custom[0]) {
+                headers.push(key);
+            }
+
+            //headers = custom[0];
+
+            //Add the header row.
+            var row = table.insertRow(-1);
+            for (var i = 0; i < columnCount; i++) {
+                var headerCell = document.createElement("TH");
+                headerCell.innerHTML = headers[i];
+                row.appendChild(headerCell);
+            }
+
+            //Add the data rows.6
+            for (var i = 1; i < custom.length; i++) {
+                row = table.insertRow(-1);
+                for (var j = 0; j < columnCount; j++) {
+                    var cell = row.insertCell();
+                    cell.innerHTML = custom[i][headers[j]];
+                }
+            }
+
+            var dvTable = document.getElementById("dvTable");
+            dvTable.innerHTML = "";
+            dvTable.appendChild(table);
+        }
+        office._htmlTable();
+    </script>
+</body>
+
+</html>
